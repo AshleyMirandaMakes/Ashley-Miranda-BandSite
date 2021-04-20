@@ -1,5 +1,64 @@
-@use 'Partials/resets' as *;
-@use 'Partials/variables' as *;
-@use 'Partials/mixins' as *;
-@use 'Partials/fonts' as *;
+@use './Partials/variables' as *;
+@use './Partials/mixins' as *;
+@use './Partials/fonts' as *;
+@use './Partials/resets' as *;
+
+.nav {
+  background-color: $color-primary-black;
+  &__top {
+    @include flex-center;
+    padding: 1rem;
+  }
+  &__list{
+    @include list-reset;
+    display: flex;
+    justify-content: space-around;
+    padding: .5rem;
+  }
+  &__link {
+    @include link-reset;
+  }
+}
+
+.hero {
+  width: 100%;
+  &__image {
+    background-image: url('../Assets/Images/hero-bio.jpg');
+    // opacity: $color-primary-black 50%;
+    background-position: center;
+    background-size: cover;
+    height: 28vh;
+  }
+  &__title {
+    color: $color-primary-white;
+    padding: auto 1rem;
+  }
+}
+
+.about {
+  width: 100%;
+  padding: 1rem;
+  &__title {
+    padding: 1rem 0rem;
+    &--secondary {
+       padding: 1rem 0rem;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+  &__quote {
+    padding: .25rem 0rem;
+  }
+  &__paragraph {
+    padding-top: 1rem;
+  }
+}
+
+.gallery {
+  background-color: $color-secondary-mercury;
+  width: 100%;
+}
+
 

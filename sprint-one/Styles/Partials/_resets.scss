@@ -1,9 +1,15 @@
+@use './fonts' as *;
+@use './variables' as *;
+
 html {
   box-sizing: border-box;
   width: 100%;
   margin: 0;
   padding: 0;
   font-size: 16px;
+  font-family: 'AvenirNext LT Pro';
+  font-weight: 400;
+  font-style: normal;
 }
 
 *,
@@ -12,4 +18,7 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+  font-family: 'AvenirNext LT Pro';
+  font-weight: 400;
+  font-style: normal;
 }

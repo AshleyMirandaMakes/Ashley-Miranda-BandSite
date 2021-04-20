@@ -1,5 +1,17 @@
+@use './variables' as *;
+@use './fonts' as *;
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin list-reset {
+  list-style-type: none;
+}
+
+@mixin link-reset {
+  text-decoration: none;
+  color: $color-primary-white;
 }
