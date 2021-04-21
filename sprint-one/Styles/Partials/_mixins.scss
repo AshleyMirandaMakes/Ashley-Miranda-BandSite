@@ -15,3 +15,18 @@
   text-decoration: none;
   color: $color-primary-white;
 }
+
+@mixin font-regular {
+  font-family: 'AvenirNext LT Pro';
+  font-weight: 400;
+}
+
+@mixin font-demi {
+  font-family: 'AvenirNext LT Pro';
+  font-weight: 600;
+}
+
+@mixin font-bold {
+  font-family: 'AvenirNext LT Pro';
+  font-weight: 700;
+}
