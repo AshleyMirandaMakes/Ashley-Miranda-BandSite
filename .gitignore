@@ -1,0 +1,9 @@
+#ignore scss map file
+*.css.map
+
+#also ignore
+.DS_Store
+
+../.vscode/
+
+node_modules/

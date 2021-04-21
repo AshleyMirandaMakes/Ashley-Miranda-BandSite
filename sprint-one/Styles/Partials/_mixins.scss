@@ -1,6 +1,7 @@
 @use './variables' as *;
 @use './fonts' as *;
 
+//general
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -16,6 +17,7 @@
   color: $color-primary-white;
 }
 
+//fonts 
 @mixin font-regular {
   font-family: 'AvenirNext LT Pro';
   font-weight: 400;
@@ -31,4 +33,15 @@
   font-weight: 700;
 }
 
+//breakpoints
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
 
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
