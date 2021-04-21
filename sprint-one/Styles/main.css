@@ -38,6 +38,14 @@ html {
   font-style: normal;
 }
 
+h2 {
+  padding: 1rem 0rem;
+}
+
+h4 {
+  font-size: 0.812rem;
+}
+
 .nav {
   background-color: #323232;
 }
@@ -69,15 +77,11 @@ html {
 }
 .hero__title {
   color: #FFFFFF;
-  padding: auto 1rem;
 }
 
 .about {
   width: 100%;
   padding: 1rem;
-}
-.about__title {
-  padding: 1rem 0rem;
 }
 .about__title--secondary {
   padding: 1rem 0rem;
@@ -96,4 +100,44 @@ html {
 .gallery {
   background-color: #E1E1E1;
   width: 100%;
+  padding: 1rem;
+}
+.gallery__image {
+  height: 160px;
+  width: auto;
+  margin: 0.5rem auto;
+}
+
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
+  padding: 1rem;
+  width: 100%;
+}
+.footer__links {
+  list-style-type: none;
+  display: flex;
+  width: 45%;
+  justify-content: space-between;
+}
+.footer__cards {
+  list-style-type: none;
+}
+.footer__copyright {
+  margin-top: 3rem;
+}
+
+.card {
+  padding: 0.5rem 0rem;
+}
+.card__title {
+  font-size: 0.875 rem;
+  font-weight: 600;
+  padding: 0.5rem 0rem;
+}
+.card__info {
+  padding: 0.5rem 0rem;
+}
+.card__email {
+  padding: 0.5rem 0rem;
 }/*# sourceMappingURL=main.css.map */

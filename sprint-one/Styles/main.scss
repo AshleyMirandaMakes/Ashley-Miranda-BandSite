@@ -31,7 +31,6 @@
   }
   &__title {
     color: $color-primary-white;
-    padding: auto 1rem;
   }
 }
 
@@ -39,7 +38,6 @@
   width: 100%;
   padding: 1rem;
   &__title {
-    padding: 1rem 0rem;
     &--secondary {
        padding: 1rem 0rem;
     }
@@ -59,6 +57,46 @@
 .gallery {
   background-color: $color-secondary-mercury;
   width: 100%;
+  padding: 1rem;
+  &__image {
+     height: 160px;
+     width: auto;
+     margin: .5rem auto;
+  }
+}
+
+.footer {
+  background-color: $color-primary-black;
+  color: $color-primary-white;
+  padding: 1rem;
+  width: 100%;
+  &__links {
+    @include list-reset;
+    display: flex;
+    width: 45%;
+    justify-content: space-between;
+  }
+  &__cards {
+    @include list-reset;
+  }
+  &__copyright {
+    margin-top: 3rem;
+  }
+}
+
+.card {
+  padding: .5rem 0rem;
+  &__title {
+    font-size: .875 rem;
+    font-weight: 600;
+    padding: .5rem 0rem;
+  }
+  &__info{
+  padding: .5rem 0rem;
+  }
+  &__email {
+    padding: .5rem 0rem;
+  }
 }
 
 
