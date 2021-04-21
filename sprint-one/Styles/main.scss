@@ -7,30 +7,42 @@
   background-color: $color-primary-black;
   &__top {
     @include flex-center;
-    padding: 1rem;
+    padding-top: 1rem;
   }
   &__list{
     @include list-reset;
     display: flex;
     justify-content: space-around;
-    padding: .5rem;
+    font-size: .825rem;
+    padding: 0.5rem 0 1rem 0;
   }
   &__link {
     @include link-reset;
+    width: 50%;
+    padding: 0.5rem 0 .85rem 0;
+    &--active {
+      border-bottom: 3px solid 
+    $color-primary-white;
+    width: 100%;
+    //come back to this
+    }
   }
 }
 
 .hero {
   width: 100%;
   &__image {
+    display: flex;
     background-image: url('../Assets/Images/hero-bio.jpg');
     // opacity: $color-primary-black 50%;
     background-position: center;
     background-size: cover;
-    height: 28vh;
+    height: 180px;
+    align-items: center;
   }
   &__title {
     color: $color-primary-white;
+    padding-left: 1rem
   }
 }
 
@@ -38,19 +50,21 @@
   width: 100%;
   padding: 1rem;
   &__title {
+    padding-bottom: .5rem;
     &--secondary {
        padding: 1rem 0rem;
     }
   }
   &__image {
     width: 100%;
-    height: auto;
+    height: 150px;
   }
   &__quote {
     padding: .25rem 0rem;
   }
   &__paragraph {
-    padding-top: 1rem;
+    padding-bottom: .5rem;
+    width: 99%;
   }
 }
 
@@ -59,9 +73,9 @@
   width: 100%;
   padding: 1rem;
   &__image {
-     height: 160px;
+     height: 158px;
      width: auto;
-     margin: .5rem auto;
+     margin: .3rem auto;
   }
 }
 
@@ -70,29 +84,36 @@
   color: $color-primary-white;
   padding: 1rem;
   width: 100%;
+  &__title {
+    padding-top: .5rem;
+  }
   &__links {
     @include list-reset;
     display: flex;
     width: 45%;
     justify-content: space-between;
+    padding-top: 1rem;
   }
   &__cards {
     @include list-reset;
   }
-  &__copyright {
+  &__logo {
     margin-top: 3rem;
+  }
+  &__copyright {
+    padding-top: .5rem;
+    font-size: .68rem;
   }
 }
 
 .card {
-  padding: .5rem 0rem;
+  padding: .25rem 0rem;
   &__title {
-    font-size: .875 rem;
-    font-weight: 600;
+    @include font-demi;
     padding: .5rem 0rem;
   }
   &__info{
-  padding: .5rem 0rem;
+    padding: .5rem 0rem;
   }
   &__email {
     padding: .5rem 0rem;
