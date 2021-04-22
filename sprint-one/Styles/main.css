@@ -280,7 +280,7 @@ p {
 }
 @media screen and (min-width: 767px) {
   .gallery__image {
-    flex: flex-wrap;
+    flex-wrap: wrap;
     height: 120px;
     width: auto;
     margin-top: 2vh;

@@ -157,7 +157,7 @@
      width: auto;
      margin: .3rem auto;
      @include tablet {
-      flex: flex-wrap;
+      flex-wrap: wrap;
       height: 120px;
       width: auto;
       margin-top: 2vh;
