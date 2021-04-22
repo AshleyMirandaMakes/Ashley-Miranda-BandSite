@@ -99,6 +99,7 @@ p {
 
 .nav {
   background-color: #323232;
+  width: 100%;
 }
 @media screen and (min-width: 767px) {
   .nav {
@@ -106,7 +107,18 @@ p {
     padding: 0.75rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .nav {
+    padding: 1rem 3rem;
+    max-width: 1154px;
+  }
+}
+.nav__container {
+  background-color: #323232;
+  width: 100%;
+}
 .nav__top {
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,6 +128,12 @@ p {
   .nav__top {
     width: 25%;
     padding: 0.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .nav__top {
+    width: 20%;
+    padding-left: 3.25rem;
   }
 }
 .nav__list {
@@ -131,6 +149,12 @@ p {
     padding: 1rem 2rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .nav__list {
+    width: 18%;
+    padding-left: 0;
+  }
+}
 .nav__link {
   text-decoration: none;
   color: #FFFFFF;
@@ -143,25 +167,55 @@ p {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 1280px) {
+  .nav__link {
+    width: 19%;
+    margin-left: 0;
+  }
+}
 .nav__link--active {
   border-bottom: 3px solid #FFFFFF;
   width: 100%;
 }
+@media screen and (min-width: 1280px) {
+  .nav__link--active {
+    padding-bottom: 1.85rem;
+  }
+}
 
 .hero {
   width: 100%;
-}
-.hero__image {
-  display: flex;
   background-image: url("../Assets/Images/hero-bio.jpg");
-  background-position: center;
   background-size: cover;
   height: 180px;
   align-items: center;
 }
 @media screen and (min-width: 767px) {
-  .hero__image {
+  .hero {
     height: 445px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 625px;
+    background-position: 50% 20%;
+  }
+}
+.hero__overlay {
+  display: flex;
+  background-color: #323232;
+  opacity: 0.4;
+  height: 180px;
+  align-items: center;
+}
+@media screen and (min-width: 767px) {
+  .hero__overlay {
+    height: 445px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__overlay {
+    height: 625px;
   }
 }
 .hero__title {
@@ -171,6 +225,11 @@ p {
 @media screen and (min-width: 767px) {
   .hero__title {
     padding-left: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    padding-left: 8.5rem;
   }
 }
 
@@ -183,12 +242,24 @@ p {
     padding: 2.5rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .about {
+    max-width: 1154px;
+    margin: 0 auto;
+  }
+}
 .about__title {
   padding-bottom: 0.5rem;
+  color: #323232;
 }
 @media screen and (min-width: 767px) {
   .about__title {
     padding-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__title {
+    padding-top: 1rem;
   }
 }
 @media screen and (min-width: 767px) {
@@ -262,6 +333,7 @@ p {
 }
 .gallery__container {
   display: flex;
+  flex-direction: column;
   width: 100%;
 }
 @media screen and (min-width: 767px) {
