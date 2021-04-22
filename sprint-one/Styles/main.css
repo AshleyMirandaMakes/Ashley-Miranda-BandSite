@@ -254,10 +254,37 @@ p {
   width: 100%;
   padding: 1rem;
 }
+@media screen and (min-width: 767px) {
+  .gallery__title {
+    padding-left: 1.5rem;
+    padding-top: 2rem;
+  }
+}
+.gallery__container {
+  display: flex;
+  width: 100%;
+}
+@media screen and (min-width: 767px) {
+  .gallery__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    padding: 0.75rem;
+  }
+}
 .gallery__image {
   height: 158px;
   width: auto;
   margin: 0.3rem auto;
+}
+@media screen and (min-width: 767px) {
+  .gallery__image {
+    flex: flex-wrap;
+    height: 120px;
+    width: auto;
+    margin-top: 2vh;
+  }
 }
 
 .footer {
@@ -265,6 +292,18 @@ p {
   color: #FFFFFF;
   padding: 1rem;
   width: 100%;
+}
+@media screen and (min-width: 767px) {
+  .footer {
+    padding: 2.5rem 2.5rem;
+  }
+}
+@media screen and (min-width: 767px) {
+  .footer__top {
+    display: flex;
+    width: 100%;
+    padding-bottom: 2.5rem;
+  }
 }
 .footer__title {
   padding-top: 0.5rem;
@@ -276,15 +315,54 @@ p {
   justify-content: space-between;
   padding-top: 1rem;
 }
+@media screen and (min-width: 767px) {
+  .footer__links {
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 767px) {
+  .footer__link {
+    width: 10%;
+  }
+}
 .footer__cards {
   list-style-type: none;
 }
-.footer__logo {
+@media screen and (min-width: 767px) {
+  .footer__cards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.footer__logo--top {
+  visibility: hidden;
+}
+@media screen and (min-width: 767px) {
+  .footer__logo--top {
+    visibility: visible;
+    margin-right: 0rem;
+  }
+}
+.footer__logo--bottom {
   margin-top: 3rem;
+}
+@media screen and (min-width: 767px) {
+  .footer__logo--bottom {
+    visibility: hidden;
+    margin-top: 0rem;
+  }
 }
 .footer__copyright {
   padding-top: 0.5rem;
   font-size: 0.68rem;
+}
+@media screen and (min-width: 767px) {
+  .footer__copyright {
+    font-size: 0.875rem;
+  }
 }
 
 .card {
@@ -295,9 +373,24 @@ p {
   font-weight: 600;
   padding: 0.5rem 0rem;
 }
+@media screen and (min-width: 767px) {
+  .card__title {
+    padding: 0rem;
+  }
+}
 .card__info {
   padding: 0.5rem 0rem;
 }
+@media screen and (min-width: 767px) {
+  .card__info {
+    padding: 0.75rem 0rem;
+  }
+}
 .card__email {
   padding: 0.5rem 0rem;
+}
+@media screen and (min-width: 767px) {
+  .card__email {
+    padding: 0.75rem 0rem;
+  }
 }/*# sourceMappingURL=main.css.map */
