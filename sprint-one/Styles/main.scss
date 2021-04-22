@@ -5,9 +5,17 @@
 
 .nav {
   background-color: $color-primary-black;
+  @include tablet {
+    display: flex;
+    padding: .75rem;
+  }
   &__top {
     @include flex-center;
     padding-top: 1rem;
+    @include tablet {
+      width: 25%;
+      padding: .75rem;
+    }
   }
   &__list{
     @include list-reset;
@@ -15,11 +23,19 @@
     justify-content: space-around;
     font-size: .825rem;
     padding: 0.5rem 0 1rem 0;
+    @include tablet {
+      width: 30%;
+      padding: 1rem 2rem;
+    }
   }
   &__link {
     @include link-reset;
     width: 50%;
     padding: 0.5rem 0 .85rem 0;
+    @include tablet {
+      width: 30%;
+      justify-content: space-between;
+    }
     &--active {
       border-bottom: 3px solid 
     $color-primary-white;
@@ -39,32 +55,79 @@
     background-size: cover;
     height: 180px;
     align-items: center;
+    @include tablet {
+      height: 445px;
+    }
   }
   &__title {
     color: $color-primary-white;
-    padding-left: 1rem
+    padding-left: 1rem;
+    @include tablet {
+      padding-left: 2.25rem
+    }
   }
 }
 
 .about {
   width: 100%;
   padding: 1rem;
+  @include tablet {
+    padding: 2.5rem;
+  }
   &__title {
     padding-bottom: .5rem;
-    &--secondary {
-       padding: 1rem 0rem;
+    @include tablet {
+      padding-bottom: 2rem;
+    }
+  }
+  &__container {
+    @include tablet {
+      width: 81%;
+      margin: auto;
     }
   }
   &__image {
     width: 100%;
     height: 150px;
+    @include tablet {
+      height: 300px;
+      margin-bottom: 1rem;
+    }
   }
   &__quote {
     padding: .25rem 0rem;
+    @include tablet {
+      padding: .5rem 0rem;
+      font-size: 1.371rem;
+    }
+    &--special {
+    @include tablet {
+      font-size: 1rem;
+    }
   }
+}
+  &__subtitle {
+    padding: 1rem 0rem;
+    @include tablet {
+      padding-top: 2.25rem;
+    }
+ }
+ &__flex-container {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
   &__paragraph {
     padding-bottom: .5rem;
     width: 99%;
+    @include tablet {
+      font-size: .85rem;
+      width: 48.5%; 
+      padding-bottom: 0rem;
+    }
   }
 }
 

@@ -35,13 +35,13 @@
 
 //breakpoints
 @mixin tablet {
-  @media screen and (min-width: $tablet-breakpoint) {
+  @media screen and (min-width: $breakpoint-tablet) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media screen and (min-width: $desktop-breakpoint) {
+  @media screen and (min-width: $breakpoint-desktop) {
     @content;
   }
 }
