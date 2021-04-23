@@ -229,7 +229,7 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .hero__title {
-    padding-left: 8.5rem;
+    padding-left: 7.5rem;
   }
 }
 
@@ -259,7 +259,8 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .about__title {
-    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
   }
 }
 @media screen and (min-width: 767px) {
@@ -278,6 +279,12 @@ p {
     margin-bottom: 1rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .about__image {
+    margin-top: 0.5rem;
+    height: 440px;
+  }
+}
 .about__quote {
   padding: 0.25rem 0rem;
 }
@@ -285,6 +292,11 @@ p {
   .about__quote {
     padding: 0.5rem 0rem;
     font-size: 1.371rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__quote {
+    width: 75%;
   }
 }
 @media screen and (min-width: 767px) {
@@ -298,6 +310,11 @@ p {
 @media screen and (min-width: 767px) {
   .about__subtitle {
     padding-top: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__subtitle {
+    padding-bottom: 1.5rem;
   }
 }
 @media screen and (min-width: 767px) {
@@ -319,6 +336,12 @@ p {
     padding-bottom: 0rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .about__paragraph {
+    font-size: 0.897rem;
+    width: 49%;
+  }
+}
 
 .gallery {
   background-color: #E1E1E1;
@@ -331,6 +354,12 @@ p {
     padding-top: 2rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .gallery__title {
+    padding-left: 7rem;
+    padding-bottom: 1.5rem;
+  }
+}
 .gallery__container {
   display: flex;
   flex-direction: column;
@@ -338,11 +367,19 @@ p {
 }
 @media screen and (min-width: 767px) {
   .gallery__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: space-evenly;
     padding: 0.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery__container {
+    width: 100%;
+    margin: 0rem;
+    padding: 0 5rem 1rem 5rem;
   }
 }
 .gallery__image {
@@ -356,6 +393,14 @@ p {
     height: 120px;
     width: auto;
     margin-top: 2vh;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery__image {
+    width: auto;
+    margin: 0;
+    padding: 0.75rem;
+    height: 205px;
   }
 }
 
