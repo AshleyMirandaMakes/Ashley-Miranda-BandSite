@@ -109,7 +109,7 @@ p {
 @media screen and (min-width: 767px) {
   .nav {
     display: flex;
-    padding: 0.75rem;
+    padding: 0rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -450,10 +450,20 @@ p {
   padding-top: 0.5rem;
   width: 100%;
 }
+@media screen and (min-width: 767px) {
+  .footer__title {
+    width: 33%;
+  }
+}
 .footer__links {
   display: flex;
   flex-direction: row;
   width: 100%;
+}
+@media screen and (min-width: 767px) {
+  .footer__links {
+    width: 66%;
+  }
 }
 .footer__links--social {
   list-style-type: none;
@@ -465,14 +475,13 @@ p {
 @media screen and (min-width: 767px) {
   .footer__links--social {
     padding-top: 1.5rem;
-    padding-left: 2rem;
-    justify-content: flex-start;
+    width: 25%;
   }
 }
 @media screen and (min-width: 767px) {
   .footer__link {
     width: 10%;
-    padding: 0 1rem;
+    padding: 0rem;
   }
 }
 .footer__cards {
@@ -499,7 +508,8 @@ p {
 @media screen and (min-width: 767px) {
   .footer__logo--top {
     visibility: visible;
-    margin-right: 0rem;
+    margin-left: 7rem;
+    margin-top: 0.85rem;
   }
 }
 .footer__logo--bottom {

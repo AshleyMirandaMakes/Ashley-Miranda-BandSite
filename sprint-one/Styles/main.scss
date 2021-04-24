@@ -8,7 +8,7 @@
   width: 100%;
   @include tablet {
     display: flex;
-    padding: .75rem;
+    padding: 0rem;
   }
   @include desktop {
     padding: 1rem 3rem;
@@ -287,11 +287,17 @@
   &__title {
     padding-top: .5rem;
     width: 100%;
+    @include tablet {
+      width: 33%;
+    }
   }
   &__links {
     display: flex;
     flex-direction: row;
     width: 100%;
+    @include tablet {
+      width: 66%;
+    }
       &--social {
       @include list-reset;
       display: flex;
@@ -299,22 +305,26 @@
       justify-content: space-between;
       padding-top: 1rem;
       @include tablet {
-        padding-top: 1.5rem; 
-        padding-left: 2rem;
-        justify-content: flex-start;
+        padding-top: 1.5rem;
+        width: 25%;
       }
+      // &--bandsite {
+      //   @include tablet {
+         
+      //   }
+      // }
     }
   }
   &__link {
     @include tablet {
       width: 10%;
-      padding: 0 1rem;
+      padding: 0rem;
     }
-    &--right {
-      @include tablet {
-        // align-self: flex-end;
-      }
-    }
+    // &--right {
+    //   @include tablet {
+    //     align-self: flex-end;
+    //   }
+    // }
   }
   &__cards {
     @include list-reset;
@@ -335,7 +345,8 @@
       visibility: hidden;
       @include tablet {
         visibility: visible;
-        margin-right: 0rem;
+        margin-left: 7rem;
+        margin-top: .85rem;
       }
     }
     &--bottom {
