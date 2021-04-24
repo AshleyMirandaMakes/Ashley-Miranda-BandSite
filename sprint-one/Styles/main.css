@@ -300,7 +300,7 @@ p {
 @media screen and (min-width: 767px) {
   .about__container {
     width: 85%;
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
   }
 }
@@ -392,6 +392,8 @@ p {
   .gallery__title {
     padding-left: 7rem;
     padding-bottom: 1.5rem;
+    max-width: 1230px;
+    margin: 0 auto;
   }
 }
 .gallery__container {
@@ -414,9 +416,8 @@ p {
 @media screen and (min-width: 1280px) {
   .gallery__container {
     width: 100%;
-    max-width: 1550px;
-    margin: 0rem;
-    padding: 0 5rem 1rem 5rem;
+    max-width: 1100px;
+    margin: 0rem auto;
   }
 }
 .gallery__image {
@@ -462,6 +463,14 @@ p {
     display: flex;
     width: 100%;
     padding-bottom: 2.5rem;
+    max-width: 835px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__top {
+    max-width: 1010px;
+    margin: 0 auto;
   }
 }
 .footer__title {
@@ -471,6 +480,11 @@ p {
 @media screen and (min-width: 767px) {
   .footer__title {
     width: 33%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__title {
+    width: 26%;
   }
 }
 .footer__links {
@@ -496,6 +510,11 @@ p {
     width: 25%;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer__links--social {
+    width: 19%;
+  }
+}
 @media screen and (min-width: 767px) {
   .footer__link {
     width: 10%;
@@ -516,8 +535,9 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .footer__cards {
-    max-width: 800px;
-    margin: 0;
+    max-width: 1010px;
+    margin: 0 auto;
+    justify-content: flex-start;
   }
 }
 .footer__logo--top {
@@ -530,6 +550,11 @@ p {
     margin-top: 0.85rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer__logo--top {
+    margin-left: 15.5rem;
+  }
+}
 .footer__logo--bottom {
   margin-top: 3rem;
 }
@@ -537,6 +562,18 @@ p {
   .footer__logo--bottom {
     visibility: hidden;
     margin-top: 0rem;
+  }
+}
+@media screen and (min-width: 767px) {
+  .footer__bottom {
+    max-width: 825px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__bottom {
+    max-width: 1010px;
+    margin: 0 auto;
   }
 }
 .footer__copyright {
@@ -551,6 +588,11 @@ p {
 
 .card {
   padding: 0.25rem 0rem;
+}
+@media screen and (min-width: 1280px) {
+  .card {
+    margin-right: 4rem;
+  }
 }
 .card__title {
   font-family: "AvenirNext LT Pro";

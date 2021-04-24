@@ -163,9 +163,13 @@
     margin: 0 auto;
     @include tablet {
       width: 85%;
-      max-width: 1000px; //check this
+      max-width: 800px; //check this
       margin: 0 auto;
     }
+    @include desktop {
+
+    }
+
   }
   &__image {
     width: 100%;
@@ -236,10 +240,14 @@
     @include tablet {
       padding-left: 2.25rem;
       padding-top: 2rem;
+      // max-width: 930px;
+      // margin: 0 auto;
     }
     @include desktop {
       padding-left: 7rem;
       padding-bottom: 1.5rem;
+      max-width: 1230px;
+      margin: 0 auto;
     }
   }
   &__container {
@@ -256,9 +264,9 @@
     }
     @include desktop {
       width: 100%;
-      max-width: 1550px;
-      margin: 0rem;
-      padding: 0 5rem 1rem 5rem;
+      max-width: 1100px;
+      margin: 0rem auto;
+      //padding: 0 5rem 1rem 5rem;
     }
   }
   &__image {
@@ -299,6 +307,14 @@
       display: flex;
       width: 100%;
       padding-bottom: 2.5rem;
+      max-width: 835px;
+      margin: 0 auto;
+      // max-width: 785px;
+      // margin: 0 auto;
+    }
+    @include desktop {
+      max-width: 1010px;
+      margin: 0 auto;
     }
   }
   &__title {
@@ -306,6 +322,9 @@
     width: 100%;
     @include tablet {
       width: 33%;
+    }
+    @include desktop {
+      width: 26%;
     }
   }
   &__links {
@@ -315,6 +334,10 @@
     @include tablet {
       width: 66%;
     }
+    // @include desktop {
+    //   max-width: 785px;
+    //   margin: 0 auto;
+    // }
       &--social {
       @include list-reset;
       display: flex;
@@ -325,11 +348,9 @@
         padding-top: 1.5rem;
         width: 25%;
       }
-      // &--bandsite {
-      //   @include tablet {
-         
-      //   }
-      // }
+      @include desktop {
+        width: 19%;
+      }
     }
   }
   &__link {
@@ -353,8 +374,9 @@
       margin: 0 auto;
     }
     @include desktop {
-      max-width: 800px;
-      margin: 0;
+      max-width: 1010px;
+      margin: 0 auto;
+      justify-content: flex-start;
     }
   }
   &__logo {
@@ -365,6 +387,9 @@
         margin-left: 7rem;
         margin-top: .85rem;
       }
+      @include desktop {
+        margin-left: 15.5rem;
+      }
     }
     &--bottom {
       margin-top: 3rem;
@@ -372,6 +397,16 @@
         visibility: hidden;
         margin-top: 0rem;
       }
+    }
+  }
+  &__bottom {
+    @include tablet {
+      max-width: 825px;
+      margin: 0 auto;
+    }
+    @include desktop {
+      max-width: 1010px;
+      margin: 0 auto;
     }
   }
   &__copyright {
@@ -385,6 +420,9 @@
 
 .card {
   padding: .25rem 0rem;
+  @include desktop {
+    margin-right: 4rem;
+  }
   &__title {
     @include font-demi;
     padding: .5rem 0rem;
