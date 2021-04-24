@@ -38,8 +38,8 @@
     display: flex;
     font-size: .825rem;
     @include tablet {
-      width: 30%;
-      padding: 1rem 2rem;
+      width: 35%;
+      padding: 2rem 2rem 0rem 2rem;
     }
     @include desktop {
       width: 18%;
@@ -50,27 +50,46 @@
       padding: .75rem;
       width: 50%;
       text-align: center;
-      
+      @include tablet {
+        padding: 0 0 1.5rem 0;
+      }
   }
   &__link {
     @include link-reset;
     @include tablet {
-      width: 30%;
+      width: 35%;
       justify-content: space-between;
+      padding: 0 0 1.5rem 0;
     }
     @include desktop {
       width: 19%;
       margin-left: 0;
     }
-  }
-    &__active {
-      //font-family: $font-demi; -- no work
-      border-bottom: 3px solid $color-primary-white;
-      padding-bottom: .5rem;
-    @include desktop {
-      padding-bottom: 1.85rem;
+    &--active {
+      @include tablet {
+        border-bottom: 3px solid $color-primary-white;
+      }
     }
   }
+  &__active {
+      @include font-demi; //-- no work
+      border-bottom: 3px solid $color-primary-white;
+      padding-bottom: .5rem;
+      @include tablet {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    @include desktop {
+        padding-bottom: 1.85rem;
+      }
+    }
+  // @include tablet {
+  //     border-bottom: none;
+  //     padding-bottom: 0;
+  //   }
+  // @include desktop {
+  //     padding-bottom: 1.85rem;
+  //   }
   &__inactive {
     color: $color-secondary-alabaster;
   }
