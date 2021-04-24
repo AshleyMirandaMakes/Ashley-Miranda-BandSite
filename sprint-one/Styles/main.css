@@ -106,21 +106,21 @@ p {
   background-color: #323232;
   width: 100%;
 }
+.nav__container {
+  background-color: #323232;
+  width: 100%;
+}
 @media screen and (min-width: 767px) {
-  .nav {
+  .nav__container {
     display: flex;
     padding: 0rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .nav {
-    padding: 1rem 3rem;
+  .nav__container {
+    margin: 0 auto;
     max-width: 1154px;
   }
-}
-.nav__container {
-  background-color: #323232;
-  width: 100%;
 }
 .nav__top {
   flex-direction: column;
@@ -137,8 +137,7 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .nav__top {
-    width: 20%;
-    padding-left: 3.25rem;
+    width: 19%;
   }
 }
 .nav__list {
@@ -325,7 +324,7 @@ p {
 }
 @media screen and (min-width: 767px) {
   .about__quote {
-    padding: 0.5rem 0rem;
+    padding-top: 1.5rem;
     font-size: 1.371rem;
   }
 }
@@ -385,7 +384,7 @@ p {
 }
 @media screen and (min-width: 767px) {
   .gallery__title {
-    padding-left: 1.5rem;
+    padding-left: 2.25rem;
     padding-top: 2rem;
   }
 }
@@ -407,8 +406,8 @@ p {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0.75rem;
-    max-width: 750px;
+    padding: 0.5rem 1rem;
+    max-width: 730px;
     margin: 0 auto;
   }
 }
