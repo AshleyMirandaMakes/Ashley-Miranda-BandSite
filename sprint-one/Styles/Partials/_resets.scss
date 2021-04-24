@@ -17,11 +17,13 @@ html {
   margin: 0;
   padding: 0;
   @include font-regular;
+  // border: 1px solid gray;
 }
 
-// body {
-//   // @include font-regular;
-// }
+body {
+  // @include font-regular;
+  color: $color-primary-black;
+}
 
 h1 {
  @include font-demi;
