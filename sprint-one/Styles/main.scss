@@ -93,7 +93,6 @@
     @include tablet {
     width: 100%;
     height: auto;
-    //max-height: 625px;
   }
   @include desktop{
     width: 100%;
@@ -103,11 +102,8 @@
   &__container{
     width: 100%;
     height: auto; 
-   // min-height: 210px;
-   // max-height: 445px;
      @include tablet {
        height: auto;
-      //height: 445px;
       max-height: 518px;
     }
     @include desktop{
@@ -171,8 +167,6 @@
 }
 
 .about {
-  // margin-top: 40rem;
-  // position: absolute;
   width: 100%;
   padding: 1rem;
   @include tablet {
@@ -303,7 +297,6 @@
       width: 100%;
       max-width: 1100px;
       margin: 0rem auto;
-      //padding: 0 5rem 1rem 5rem;
     }
   }
   &__image {
@@ -325,7 +318,6 @@
       height: 205px;
     }
     &:hover{
-      //opacity: 1.0;
       filter: grayscale(0);
     }
   }
@@ -346,8 +338,6 @@
       padding-bottom: 2.5rem;
       max-width: 835px;
       margin: 0 auto;
-      // max-width: 785px;
-      // margin: 0 auto;
     }
     @include desktop {
       max-width: 1010px;
@@ -371,10 +361,6 @@
     @include tablet {
       width: 66%;
     }
-    // @include desktop {
-    //   max-width: 785px;
-    //   margin: 0 auto;
-    // }
       &--social {
       @include list-reset;
       display: flex;
@@ -395,11 +381,6 @@
       width: 10%;
       padding: 0rem;
     }
-    // &--right {
-    //   @include tablet {
-    //     align-self: flex-end;
-    //   }
-    // }
   }
   &__cards {
     @include list-reset;
@@ -479,6 +460,9 @@
     @include tablet {
       padding: .75rem 0rem;
     }
+  }
+  &__link {
+    @include link-reset;
   }
 }
 

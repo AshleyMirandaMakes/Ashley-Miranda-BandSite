@@ -663,4 +663,8 @@ p {
   .card__email {
     padding: 0.75rem 0rem;
   }
+}
+.card__link {
+  text-decoration: none;
+  color: #FFFFFF;
 }/*# sourceMappingURL=main.css.map */
