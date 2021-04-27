@@ -16,39 +16,41 @@ const comments = [
   }
 ]
 
-//check that the object array prints to the console
+//check that the object array works
 const comment = comments[0];
-console.log(comment);
 
+//item id selection to link to html
 const commentListEl = document.querySelector("#comment__list")
 
-
-// const nameEl = 
-
-//  <!-- this is what you're adding now
-//  <section class="comment__section" id="#">
-//  <div class="card__list">
-//    <article class="comment__card">
-//      <div class="comment__image"></div>
-//      <div class="comment__content--top">
-//        <h2 class="comment__title">CARD TITLE</h2>
-//        <h2 class="comment__timestamp">TIMESTAMP</h2>
-//      </div>
-//      <div class="comment__content--bottom">
-//        <p class="comment__text">INPUT COMMENT</p>
-//      </div>
-//    </article>
-//  </div>
-// </section> -->
-
-
+//card creation
 const cardEl = createElementWithClass("article", "comment__card");
-
 commentListEl.appendChild(cardEl);
 
+const cardImage = createElementWithClass("div", "comment__image");
+cardEl.appendChild(cardImage);
+
+const cardContentTop = createElementWithClass("div", "comment__content--top");
+cardEl.appendChild(cardContentTop);
+
+const cardName = createElementWithClass("h2", "comment__name");
+cardName.innerText = comment.name;
+cardContentTop.appendChild(cardName);
+
+const cardTimestamp = createElementWithClass("h2", "comment__timestamp");
+cardTimestamp.innerText = comment.timestamp;
+cardContentTop.appendChild(cardTimestamp);
+
+const cardContentBottom = createElementWithClass("div", "comment__content--bottom");
+cardEl.appendChild(cardContentBottom);
+
+const cardComment = createElementWithClass("p", "comment__comment");
+cardComment.innerText = comment.comment;
+cardContentBottom.appendChild(cardComment);
+
+//function to help create some el & add classes
 //function declaration- hoisted
-function createElementWithClass (tag, className) {
-  const el = document.createElement(tag);
+function createElementWithClass (element, className) {
+  const el = document.createElement(element);
   el.classList.add(className);
 
   return el;
