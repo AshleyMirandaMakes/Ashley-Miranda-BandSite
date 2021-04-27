@@ -3,89 +3,89 @@
 @use './Partials/fonts' as *;
 @use './Partials/resets' as *;
 
-.nav {
-  background-color: $color-primary-black;
-  width: 100%;
-  &__container {
-    background-color: $color-primary-black;
-    width: 100%;
-    @include tablet {
-      display: flex;
-      padding: 0rem;
-    }
-    @include desktop {
-      @include margin-auto;
-      max-width: 1154px;
-    }
-  }
-  &__top {
-    @include flex-center;
-    flex-direction: column;
-    padding-top: 1rem;
-    @include tablet {
-      width: 25%;
-      padding: .75rem;
-    }
-    @include desktop {
-      width: 19%;
-    }
-  }
-  &__list{
-    @include list-reset;
-    width: 100%;
-    display: flex;
-    font-size: .825rem;
-    @include tablet {
-      width: 35%;
-      padding: 2rem 2rem 0rem 2rem;
-    }
-    @include desktop {
-      width: 18%;
-      padding-left: 0;
-    }
-  }
-  &__item {
-      padding: .75rem;
-      width: 50%;
-      text-align: center;
-      &:hover {
-        font-style: italic;
-      }
-      @include tablet {
-        padding: 0 0 1.5rem 0;
-      }
-  }
-  &__link {
-    @include link-reset;
-    @include tablet {
-      width: 35%;
-      justify-content: space-between;
-      padding: 0 0 1.35rem 0;
-    }
-    @include desktop {
-      width: 19%;
-      margin-left: 0;
-      padding: 0 0 1.7rem 0;
-    }
-    &--active {
-      @include tablet {
-        border-bottom: 3px solid $color-primary-white;
-      }
-    }
-  }
-  &__active {
-      @include font-demi; //-- no work
-      border-bottom: 3px solid $color-primary-white;
-      padding-bottom: .5rem;
-      @include tablet {
-        border-bottom: none;
-        padding-bottom: 0;
-      }
-    @include desktop {
-        padding-bottom: 1.85rem;
-      }
-    }
-}
+// .nav {
+//   background-color: $color-primary-black;
+//   width: 100%;
+//   &__container {
+//     background-color: $color-primary-black;
+//     width: 100%;
+//     @include tablet {
+//       display: flex;
+//       padding: 0rem;
+//     }
+//     @include desktop {
+//       @include margin-auto;
+//       max-width: 1154px;
+//     }
+//   }
+//   &__top {
+//     @include flex-center;
+//     flex-direction: column;
+//     padding-top: 1rem;
+//     @include tablet {
+//       width: 25%;
+//       padding: .75rem;
+//     }
+//     @include desktop {
+//       width: 19%;
+//     }
+//   }
+//   &__list{
+//     @include list-reset;
+//     width: 100%;
+//     display: flex;
+//     font-size: .825rem;
+//     @include tablet {
+//       width: 35%;
+//       padding: 2rem 2rem 0rem 2rem;
+//     }
+//     @include desktop {
+//       width: 18%;
+//       padding-left: 0;
+//     }
+//   }
+//   &__item {
+//       padding: .75rem;
+//       width: 50%;
+//       text-align: center;
+//       &:hover {
+//         font-style: italic;
+//       }
+//       @include tablet {
+//         padding: 0 0 1.5rem 0;
+//       }
+//   }
+//   &__link {
+//     @include link-reset;
+//     @include tablet {
+//       width: 35%;
+//       justify-content: space-between;
+//       padding: 0 0 1.35rem 0;
+//     }
+//     @include desktop {
+//       width: 19%;
+//       margin-left: 0;
+//       padding: 0 0 1.7rem 0;
+//     }
+//     &--active {
+//       @include tablet {
+//         border-bottom: 3px solid $color-primary-white;
+//       }
+//     }
+//   }
+//   &__active {
+//       @include font-demi; //-- no work
+//       border-bottom: 3px solid $color-primary-white;
+//       padding-bottom: .5rem;
+//       @include tablet {
+//         border-bottom: none;
+//         padding-bottom: 0;
+//       }
+//     @include desktop {
+//         padding-bottom: 1.85rem;
+//       }
+//     }
+// }
 
 .hero {
   max-width: 100%;
