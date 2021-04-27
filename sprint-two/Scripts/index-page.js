@@ -15,13 +15,26 @@ const comments = [
     comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
   }
 ]
+//item id selection to link to html
+const commentListEl = document.getElementById("comment__list")
 
 //check that the object array works
 const comment = comments[0];
+//console.log(comments);
 
-//item id selection to link to html
-const commentListEl = document.querySelector("#comment__list")
+//this invokes my card-creating function
+// createCommentCards(comments[0]);
+// createCommentCards(comments[1]);
+// createCommentCards(comments[2]);
 
+ for (let i = 0; i < comments.length; i++) {
+   let cardEl = createCommentCards(comments[i]);
+  //  console.log(createCommentCards(comments[i]));
+   commentListEl.appendChild(cardEl);
+ };
+ 
+//this function creates my cards
+function createCommentCards (comment) {
 //card creation
 const cardEl = createElementWithClass("article", "comment__card");
 commentListEl.appendChild(cardEl);
@@ -46,6 +59,9 @@ cardEl.appendChild(cardContentBottom);
 const cardComment = createElementWithClass("p", "comment__comment");
 cardComment.innerText = comment.comment;
 cardContentBottom.appendChild(cardComment);
+
+return cardEl;
+};
 
 //function to help create some el & add classes
 //function declaration- hoisted
