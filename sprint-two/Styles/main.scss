@@ -315,150 +315,150 @@
   }
 }
 
-.footer {
-  background-color: $color-primary-black;
-  color: $color-primary-white;
-  padding: 1rem;
-  width: 100%;
-  @include tablet {
-    padding: 2.5rem 2.5rem;
-  }
-  &__top {
-    @include tablet {
-      @include  margin-auto;
-      display: flex;
-      width: 100%;
-      padding-bottom: 2.5rem;
-      max-width: 735px;
-    }
-    @include desktop {
-      max-width: 1010px;
-    }
-  }
-  &__title {
-    padding-top: .5rem;
-    width: 100%;
-    @include tablet {
-      width: 33%;
-      max-width: 235px;
-    }
-    @include desktop {
-      width: 26%;
-    }
-  }
-  &__links {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    @include tablet {
-      width: 66%;
-    }
-      &--social {
-      @include list-reset;
-      display: flex;
-      width: 45%;
-      justify-content: space-between;
-      padding-top: 1rem;
-      @include tablet {
-        padding-top: 1.5rem;
-        width: 25%;
-      }
-      @include desktop {
-        width: 19%;
-      }
-    }
-  }
-  &__link {
-    @include tablet {
-      width: 10%;
-      padding: 0rem;
-    }
-  }
-  &__cards {
-    @include list-reset;
-    @include tablet {
-      @include  margin-auto;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      max-width: 720px;
-    }
-    @include desktop {
-      max-width: 1010px;
-      justify-content: flex-start;
-    }
-  }
-  &__logo {
-    &--top {
-      visibility: hidden;
-      @include tablet {
-        visibility: visible;
-        margin-left: 7rem;
-        margin-top: .85rem;
-      }
-      @include desktop {
-        margin-left: 16.75rem;
-      }
-    }
-    &--bottom {
-      margin-top: 3rem;
-      @include tablet {
-        visibility: hidden;
-        margin-top: 0rem;
-      }
-    }
-  }
-  &__bottom {
-    @include tablet {
-      @include  margin-auto;
-      max-width: 825px;
-    }
-    @include desktop {
-      max-width: 1010px;
-    }
-  }
-  &__copyright {
-    @include  margin-auto;
-    padding-top: .5rem;
-    font-size: .68rem;
-    @include tablet {
-      font-size: .875rem;
-      max-width: 735px;
-    }
-    @include desktop {
-      max-width: 1010px;
-    }
-  }
-}
+// .footer {
+//   background-color: $color-primary-black;
+//   color: $color-primary-white;
+//   padding: 1rem;
+//   width: 100%;
+//   @include tablet {
+//     padding: 2.5rem 2.5rem;
+//   }
+//   &__top {
+//     @include tablet {
+//       @include  margin-auto;
+//       display: flex;
+//       width: 100%;
+//       padding-bottom: 2.5rem;
+//       max-width: 735px;
+//     }
+//     @include desktop {
+//       max-width: 1010px;
+//     }
+//   }
+//   &__title {
+//     padding-top: .5rem;
+//     width: 100%;
+//     @include tablet {
+//       width: 33%;
+//       max-width: 235px;
+//     }
+//     @include desktop {
+//       width: 26%;
+//     }
+//   }
+//   &__links {
+//     display: flex;
+//     flex-direction: row;
+//     width: 100%;
+//     @include tablet {
+//       width: 66%;
+//     }
+//       &--social {
+//       @include list-reset;
+//       display: flex;
+//       width: 45%;
+//       justify-content: space-between;
+//       padding-top: 1rem;
+//       @include tablet {
+//         padding-top: 1.5rem;
+//         width: 25%;
+//       }
+//       @include desktop {
+//         width: 19%;
+//       }
+//     }
+//   }
+//   &__link {
+//     @include tablet {
+//       width: 10%;
+//       padding: 0rem;
+//     }
+//   }
+//   &__cards {
+//     @include list-reset;
+//     @include tablet {
+//       @include  margin-auto;
+//       display: flex;
+//       justify-content: space-between;
+//       width: 100%;
+//       max-width: 720px;
+//     }
+//     @include desktop {
+//       max-width: 1010px;
+//       justify-content: flex-start;
+//     }
+//   }
+//   &__logo {
+//     &--top {
+//       visibility: hidden;
+//       @include tablet {
+//         visibility: visible;
+//         margin-left: 7rem;
+//         margin-top: .85rem;
+//       }
+//       @include desktop {
+//         margin-left: 16.75rem;
+//       }
+//     }
+//     &--bottom {
+//       margin-top: 3rem;
+//       @include tablet {
+//         visibility: hidden;
+//         margin-top: 0rem;
+//       }
+//     }
+//   }
+//   &__bottom {
+//     @include tablet {
+//       @include  margin-auto;
+//       max-width: 825px;
+//     }
+//     @include desktop {
+//       max-width: 1010px;
+//     }
+//   }
+//   &__copyright {
+//     @include  margin-auto;
+//     padding-top: .5rem;
+//     font-size: .68rem;
+//     @include tablet {
+//       font-size: .875rem;
+//       max-width: 735px;
+//     }
+//     @include desktop {
+//       max-width: 1010px;
+//     }
+//   }
+// }
 
-.card {
-  padding: .25rem 0rem;
-  margin: 0;
-  @include desktop {
-    margin-right: 4rem;
-  }
-  &__title {
-    @include font-demi;
-    padding: .5rem 0rem;
-    @include tablet {
-      padding: 0rem;
-    }
-  }
-  &__info{
-    padding: .5rem 0rem;
-    @include tablet {
-      padding: .75rem 0rem;
-    }
-  }
-  &__email {
-    padding: .5rem 0rem;
-    @include tablet {
-      padding: .75rem 0rem;
-    }
-  }
-  &__link {
-    @include link-reset;
-  }
-}
+// .card {
+//   padding: .25rem 0rem;
+//   margin: 0;
+//   @include desktop {
+//     margin-right: 4rem;
+//   }
+//   &__title {
+//     @include font-demi;
+//     padding: .5rem 0rem;
+//     @include tablet {
+//       padding: 0rem;
+//     }
+//   }
+//   &__info{
+//     padding: .5rem 0rem;
+//     @include tablet {
+//       padding: .75rem 0rem;
+//     }
+//   }
+//   &__email {
+//     padding: .5rem 0rem;
+//     @include tablet {
+//       padding: .75rem 0rem;
+//     }
+//   }
+//   &__link {
+//     @include link-reset;
+//   }
+// }
 
 
