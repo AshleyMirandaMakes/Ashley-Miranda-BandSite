@@ -378,186 +378,43 @@ p {
   filter: grayscale(0);
 }
 
-.footer {
-  background-color: #323232;
-  color: #FFFFFF;
+.comment____container {
   padding: 1rem;
-  width: 100%;
 }
-@media screen and (min-width: 767px) {
-  .footer {
-    padding: 2.5rem 2.5rem;
-  }
-}
-@media screen and (min-width: 767px) {
-  .footer__top {
-    margin: 0 auto;
-    display: flex;
-    width: 100%;
-    padding-bottom: 2.5rem;
-    max-width: 735px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__top {
-    max-width: 1010px;
-  }
-}
-.footer__title {
-  padding-top: 0.5rem;
-  width: 100%;
-}
-@media screen and (min-width: 767px) {
-  .footer__title {
-    width: 33%;
-    max-width: 235px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__title {
-    width: 26%;
-  }
-}
-.footer__links {
+.comment__card {
   display: flex;
-  flex-direction: row;
+  border-bottom: 1px solid #E1E1E1;
+  width: 100%;
+  padding: 1rem;
+}
+.comment__image {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #E1E1E1;
+  padding: 1rem;
+}
+.comment__content {
+  padding-left: 1rem;
   width: 100%;
 }
-@media screen and (min-width: 767px) {
-  .footer__links {
-    width: 66%;
-  }
-}
-.footer__links--social {
-  list-style-type: none;
+.comment__content--top {
   display: flex;
-  width: 45%;
   justify-content: space-between;
-  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
-@media screen and (min-width: 767px) {
-  .footer__links--social {
-    padding-top: 1.5rem;
-    width: 25%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__links--social {
-    width: 19%;
-  }
-}
-@media screen and (min-width: 767px) {
-  .footer__link {
-    width: 10%;
-    padding: 0rem;
-  }
-}
-.footer__cards {
-  list-style-type: none;
-}
-@media screen and (min-width: 767px) {
-  .footer__cards {
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 720px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__cards {
-    max-width: 1010px;
-    justify-content: flex-start;
-  }
-}
-.footer__logo--top {
-  visibility: hidden;
-}
-@media screen and (min-width: 767px) {
-  .footer__logo--top {
-    visibility: visible;
-    margin-left: 7rem;
-    margin-top: 0.85rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__logo--top {
-    margin-left: 16.75rem;
-  }
-}
-.footer__logo--bottom {
-  margin-top: 3rem;
-}
-@media screen and (min-width: 767px) {
-  .footer__logo--bottom {
-    visibility: hidden;
-    margin-top: 0rem;
-  }
-}
-@media screen and (min-width: 767px) {
-  .footer__bottom {
-    margin: 0 auto;
-    max-width: 825px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__bottom {
-    max-width: 1010px;
-  }
-}
-.footer__copyright {
-  margin: 0 auto;
-  padding-top: 0.5rem;
-  font-size: 0.68rem;
-}
-@media screen and (min-width: 767px) {
-  .footer__copyright {
-    font-size: 0.875rem;
-    max-width: 735px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__copyright {
-    max-width: 1010px;
-  }
-}
-
-.card {
-  padding: 0.25rem 0rem;
-  margin: 0;
-}
-@media screen and (min-width: 1280px) {
-  .card {
-    margin-right: 4rem;
-  }
-}
-.card__title {
+.comment__name {
   font-family: "AvenirNext LT Pro";
   font-weight: 600;
-  padding: 0.5rem 0rem;
+  font-size: 0.8rem;
 }
-@media screen and (min-width: 767px) {
-  .card__title {
-    padding: 0rem;
-  }
+.comment__timestamp {
+  color: #E1E1E1;
 }
-.card__info {
-  padding: 0.5rem 0rem;
+.comment__content--bottom {
+  display: flex;
+  flex-direction: column;
 }
-@media screen and (min-width: 767px) {
-  .card__info {
-    padding: 0.75rem 0rem;
-  }
-}
-.card__email {
-  padding: 0.5rem 0rem;
-}
-@media screen and (min-width: 767px) {
-  .card__email {
-    padding: 0.75rem 0rem;
-  }
-}
-.card__link {
-  text-decoration: none;
-  color: #FFFFFF;
+.comment__comment {
+  font-size: 0.79rem;
 }/*# sourceMappingURL=main.css.map */
