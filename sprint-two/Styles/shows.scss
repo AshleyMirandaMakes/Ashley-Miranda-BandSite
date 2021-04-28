@@ -1,0 +1,88 @@
+@use './Partials/variables' as *;
+@use './Partials/mixins' as *;
+@use './Partials/fonts' as *;
+@use './Partials/resets' as *;
+
+
+.hero {
+  max-width: 100%;
+  max-height: auto;
+    @include tablet {
+    width: 100%;
+    height: auto;
+  }
+  @include desktop{
+    width: 100%;
+    height: auto;
+    max-height: 625px;
+  }
+  &__container{
+    width: 100%;
+    height: auto; 
+     @include tablet {
+       height: auto;
+      max-height: 518px;
+    }
+    @include desktop{
+      height: auto;
+      height: 625px;
+      max-height: 625px;
+    }
+  }
+  &__image {
+    background-position: 50% 20%;
+    width: 100%;
+    height: 200px;
+    max-height: 445px;
+    @include tablet {
+      height: auto;
+      max-height: 510px;
+    }
+    @include desktop{
+      height: auto;
+      max-height: 625px;
+    }
+  }
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: -12.75rem;
+    background: rgba(0, 0, 0, 0.3); 
+    width: 100%;
+    height: auto;
+    height: 200px; 
+    padding: 1rem;
+    @include tablet {
+      height: 510px;
+      max-height: 510px;
+      margin-top: -32.15rem;
+    }
+    @include desktop{
+      height: 625px;
+      max-height: 625px;
+      margin-top: -39.1rem;
+      // margin: 0 auto; ughhh this just messes it up
+      padding-left: 6rem;
+    }
+  }
+  &__subtitle {
+    //thinner
+    color: $color-primary-white;
+    padding-left: .25rem;
+  }
+  &__title {
+    @include margin-auto; /// hmmmm doesn't seem to work
+    position: absolute;
+    color: $color-primary-white;
+    z-index: 5;
+    padding-left: .25rem;
+    @include tablet {
+      padding-left: 1.25rem
+    }
+    @include desktop {
+      width: 600px;
+      max-width: 1200px;
+    }
+  }
+}
