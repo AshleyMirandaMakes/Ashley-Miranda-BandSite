@@ -310,7 +310,7 @@ p {
 }
 
 .gallery {
-  background-color: #E1E1E1;
+  background-color: #AFAFAF;
   width: 100%;
   padding: 1rem;
 }
@@ -378,7 +378,71 @@ p {
   filter: grayscale(0);
 }
 
-.comment____container {
+.form {
+  width: 100%;
+}
+.form__container {
+  padding: 1rem;
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #E1E1E1;
+}
+.form__image {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-image: url("../Assets/Images/Mohan-muruge.jpg");
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.form__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 1rem;
+}
+.form__title {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 600;
+  color: #AFAFAF;
+  font-size: 0.55rem;
+  padding-bottom: 0.5rem;
+}
+.form__input {
+  display: block;
+  margin: 0.35rem 0rem;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #E1E1E1;
+  border-radius: 3px;
+  background-color: #FAFAFA;
+}
+.form__input--special {
+  height: 5.5rem;
+}
+.form__button {
+  background-color: #323232;
+  color: #FFFFFF;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.comment__title {
+  padding: 0.75rem 1rem 0rem 1rem;
+  color: #323232;
+}
+@media screen and (min-width: 767px) {
+  .comment__title {
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__title {
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+  }
+}
+.comment__container {
   padding: 1rem;
 }
 .comment__card {

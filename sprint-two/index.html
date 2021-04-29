@@ -63,19 +63,17 @@
     </div>
   </section>
   <section>
-    <h2 class="section__title" >Join the Conversation</h2>
-    <!-- THIS BECOMES JAVASCRIPT RENDER -->
-    <!-- <article class="comment__form"></article> -->
-    <form class="comment__card" action="" id="comment-form">
-      <div class="comment__image"></div> 
-      <!-- <div class="comment__content"> -->
-        <label for="comment-name">NAME 
-          <input type="text" name="fullName" id="fullName" value="" placeholder="Enter your name">
+    <h2 class="comment__title" >Join the Conversation</h2>
+     <form class="form__container" action="" id="comment-form">
+      <div class="form__image"></div> 
+        <div class="form__content">
+        <label class="form__title" for="comment-name">NAME 
+          <input type="text" name="fullName" id="fullName" value="" class="form__input" placeholder="Enter your name">
         </label>
-        <label for="comment-comment">COMMENT
-          <textarea type="text" name="fullComment" id="fullComment" placeholder="Add a new comment"></textarea>
+        <label class="form__title" for="comment-comment form__content">COMMENT
+          <textarea type="text"  class="form__input form__input--special"name="fullComment" id="fullComment" placeholder="Add a new comment"></textarea>
         </label>
-        <button type="submit">COMMENT</button>
+        <button class="form__button" type="submit">COMMENT</button>
     </div>
     </form>
     <section class="comment__section">

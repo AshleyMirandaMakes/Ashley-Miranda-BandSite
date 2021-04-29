@@ -84,6 +84,8 @@ const formEl = document.querySelector("#comment-form");
 function handleFormSubmission(event) {
   event.preventDefault();
 
+  //add an if statement about inputs being empty
+
     const commentData = {
       name: event.target.fullName.value,
       comment: event.target.fullComment.value
