@@ -102,109 +102,50 @@ p {
   min-height: 30vh;
   max-height: auto;
 }
-@media screen and (min-width: 767px) {
-  .hero {
-    width: 100%;
-    height: auto;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero {
-    width: 100%;
-    height: auto;
-    max-height: 625px;
-  }
-}
 .hero__container {
   width: 100%;
-  min-height: 30vh;
-  max-height: auto;
-}
-@media screen and (min-width: 767px) {
-  .hero__container {
-    height: auto;
-    max-height: 518px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero__container {
-    height: auto;
-    height: 625px;
-    max-height: 625px;
-  }
+  height: 40vh;
 }
 .hero__image {
   background-position: 50% 20%;
   width: 100%;
-  min-height: 30vh;
-  max-height: auto;
-}
-@media screen and (min-width: 767px) {
-  .hero__image {
-    height: auto;
-    max-height: 510px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero__image {
-    height: auto;
-    max-height: 625px;
-  }
+  height: 40vh;
 }
 .hero__content {
   position: relative;
+  padding: 1.5rem 0.75rem;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  margin-top: -12.75rem;
+  margin-top: -17.65rem;
   background: rgba(0, 0, 0, 0.3);
   width: 100%;
-  height: auto;
-  height: 200px;
-  padding: 1rem;
-}
-@media screen and (min-width: 767px) {
-  .hero__content {
-    height: 510px;
-    max-height: 510px;
-    margin-top: -32.15rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero__content {
-    height: 625px;
-    max-height: 625px;
-    margin-top: -39.1rem;
-    padding-left: 6rem;
-  }
+  height: 40vh;
 }
 .hero__subtitle {
-  color: #FFFFFF;
+  font-family: "AvenirNext LT Pro";
+  font-weight: 400;
+  position: relative;
+  color: #FAFAFA;
   padding-left: 0.25rem;
 }
 .hero__title {
-  margin: 0 auto;
-  position: absolute;
+  font-family: "AvenirNext LT Pro";
+  font-weight: 400;
+  width: 70%;
+  position: relative;
   color: #FFFFFF;
-  z-index: 5;
-  padding-left: 0.25rem;
-}
-@media screen and (min-width: 767px) {
-  .hero__title {
-    padding-left: 1.25rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero__title {
-    width: 600px;
-    max-width: 1200px;
-  }
+  padding: 1rem 0rem;
 }
 .hero__music {
-  width: 90%;
+  position: relative;
+  max-width: 100%;
+  max-height: 45%;
 }
 @media screen and (min-width: 767px) {
   .hero__music {
     width: 60%;
   }
+}
+.shows__title {
+  color: #323232;
 }/*# sourceMappingURL=shows.css.map */
