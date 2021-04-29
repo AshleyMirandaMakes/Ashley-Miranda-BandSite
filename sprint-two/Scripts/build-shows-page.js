@@ -31,8 +31,20 @@ const shows = [
   },
 ];
 
+//check object appears in the console.
 console.log(shows[0]);
 
+//id selections to link to html
+const showsListEl = document.getElementById("shows__list")
+
+//card creation 
+const showsCardEl = createElementWithClass("article", "shows__card");
+showsListEl.appendChild(showsCardEl);
+
+//not working
+const showsCardTitle = createElementWithClass("h4", "card__title");
+showCardTitle.innerHTML = "DATES";
+showsCardEl.appendChild(showsCardTitle);
 
 {/* <section class="shows__section" id="shows__list">
        <article class="shows__card">
@@ -45,3 +57,11 @@ console.log(shows[0]);
          <a href="#" class="button">BUT TICKETS</a>
        </article>
       </section> */}
+
+
+      function createElementWithClass (element, className) {
+        const el = document.createElement(element);
+        el.classList.add(className);
+      
+        return el;
+      }

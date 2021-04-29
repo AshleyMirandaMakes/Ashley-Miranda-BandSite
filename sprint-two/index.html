@@ -65,9 +65,21 @@
   <section>
     <h2 class="section__title" >Join the Conversation</h2>
     <!-- THIS BECOMES JAVASCRIPT RENDER -->
-    <!-- <article class="comment form"></article> -->
-    <section class="comment__section" id="comment__list">
-    <div class="comment__container">
+    <!-- <article class="comment__form"></article> -->
+    <form class="comment__card" action="" id="comment-form">
+      <div class="comment__image"></div> 
+      <!-- <div class="comment__content"> -->
+        <label for="comment-name">NAME 
+          <input type="text" name="fullName" id="fullName" value="" placeholder="Enter your name">
+        </label>
+        <label for="comment-comment">COMMENT
+          <textarea type="text" name="fullComment" id="fullComment" placeholder="Add a new comment"></textarea>
+        </label>
+        <button type="submit">COMMENT</button>
+    </div>
+    </form>
+    <section class="comment__section">
+    <div class="comment__container" id="comment-list">
       <!-- <article class="comment__card">
         <div class="comment__image"></div>
         <div class="comment__content">
@@ -79,7 +91,7 @@
             <p class="comment__comment">This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.</p>
           </div>
         </div>
-      </article> -->
+      </article>  -->
     </div> 
   </section>
     </article> 
