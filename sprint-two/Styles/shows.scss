@@ -6,6 +6,7 @@
 
 .hero {
   max-width: 100%;
+  min-height: 30vh;
   max-height: auto;
     @include tablet {
     width: 100%;
@@ -18,7 +19,8 @@
   }
   &__container{
     width: 100%;
-    height: auto; 
+    min-height: 30vh;
+    max-height: auto;
      @include tablet {
        height: auto;
       max-height: 518px;
@@ -32,8 +34,8 @@
   &__image {
     background-position: 50% 20%;
     width: 100%;
-    height: 200px;
-    max-height: 445px;
+    min-height: 30vh;
+    max-height: auto;
     @include tablet {
       height: auto;
       max-height: 510px;
@@ -47,6 +49,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    flex-direction: column;
     margin-top: -12.75rem;
     background: rgba(0, 0, 0, 0.3); 
     width: 100%;
@@ -85,4 +88,13 @@
       max-width: 1200px;
     }
   }
+  &__music {
+    //position: absolute;
+    width: 90%;
+    @include tablet {
+        width: 60%;
+        @include desktop {
+        }
+    }
+}
 }
