@@ -154,4 +154,45 @@ p {
   color: #000000;
   padding: 1rem 0rem;
   font-size: 2rem;
+}
+
+.card {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 400;
+  width: 100%;
+  color: #323232;
+  border-bottom: 1px solid #E1E1E1;
+  padding-bottom: 1.25rem;
+}
+.card__title {
+  color: #AFAFAF;
+  font-size: 0.6rem;
+  padding: 0;
+}
+.card__date {
+  font-size: 0.75rem;
+  padding: 0;
+  padding-bottom: 0.5rem;
+}
+.card__venue {
+  font-size: 0.75rem;
+  padding: 0;
+  padding-bottom: 0.5rem;
+}
+.card__location {
+  font-size: 0.75rem;
+  padding: 0;
+  padding-bottom: 1rem;
+}
+.card__button {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: "AvenirNext LT Pro";
+  font-weight: 600;
+  background-color: #323232;
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 4rem;
 }/*# sourceMappingURL=shows.css.map */

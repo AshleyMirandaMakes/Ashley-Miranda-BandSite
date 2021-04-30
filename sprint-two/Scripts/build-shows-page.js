@@ -1,12 +1,8 @@
 const shows = [
   {
-    titleOne: "DATES",
     date: "Mon Sept 06 2021",
-    titleTwo: "VENUE",
     venue: "Ronald Lane",
-    titleThree: "LOCATION",
     location: "San Francisco, CA"
-
   },
   {
     date: "Tue Sept 21 2021",
@@ -36,14 +32,14 @@ const shows = [
 ];
 
 //check object appears in the console
+console.log(shows.date);
 
 //item id selection to link to html -- global
 const showsListEl = document.querySelector("#shows-list")
 
 //show card  creator
 function createShowCards(show) {
-  //card creation
-  const cardEl = createElementWithClass("article", "shows__card");
+  const cardEl = createElementWithClass("article", "card");
   showsListEl.appendChild(cardEl);
  
   const cardTitleOne = createElementWithClass("h3", "card__title");
@@ -51,7 +47,7 @@ function createShowCards(show) {
   cardEl.appendChild(cardTitleOne);
   
   const cardDate = createElementWithClass("h3", "card__date");
-  cardDate.innerText = shows.date;
+  cardDate.innerText = show.date;
   cardEl.appendChild(cardDate);
 
   const cardTitleTwo = createElementWithClass("h3", "card__title");
@@ -59,7 +55,7 @@ function createShowCards(show) {
   cardEl.appendChild(cardTitleTwo);
   
   const cardVenue = createElementWithClass("h3", "card__venue");
-  cardVenue.innerText = shows.venue;
+  cardVenue.innerText = show.venue;
   cardEl.appendChild(cardVenue);
 
   const cardTitleThree = createElementWithClass("h3", "card__title");
@@ -67,7 +63,7 @@ function createShowCards(show) {
   cardEl.appendChild(cardTitleThree);
 
   const cardLocation = createElementWithClass("h3", "card__location");
-  cardLocation.innerText = shows.location;
+  cardLocation.innerText = show.location;
   cardEl.appendChild(cardLocation);
 
   const cardButton = createElementWithClass("a", "card__button")
@@ -79,22 +75,21 @@ function createShowCards(show) {
   return cardEl;
   };
 
-//function to render show to the page 
+
+
 function displayShows() {
-  // showsListEl.innerHTML = "";
   
-  //render all shows
   for (let i = 0; i < shows.length; i++) {
     let cardEl = createShowCards(shows[i]);
     showsListEl.appendChild(cardEl);
   };
 }
-//invoke the function, so it appears on page load
+
 displayShows();
 
-console.log(shows)
 
-//function to help create some el & add classes
+
+
 function createElementWithClass (element, className) {
   const el = document.createElement(element);
   el.classList.add(className);

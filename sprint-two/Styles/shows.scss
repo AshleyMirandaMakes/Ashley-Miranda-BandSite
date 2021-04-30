@@ -113,3 +113,41 @@
     font-size: 2rem;
   }
 }
+
+.card {
+  @include font-regular;
+  width: 100%;
+  color: $color-primary-black;
+  border-bottom: 1px solid $color-secondary-mercury;
+  padding-bottom: 1.25rem;
+  &__title {
+   color: $color-primary-silver; 
+   font-size: .6rem;
+   padding: 0;
+  }
+  &__date{
+    font-size: .75rem;
+    padding: 0;
+    padding-bottom: .5rem;
+  }
+  &__venue{
+    font-size: .75rem;
+    padding: 0;
+    padding-bottom: .5rem;
+  }
+  &__location{
+    font-size: .75rem;
+    padding: 0;
+    padding-bottom: 1rem;
+  }
+  &__button{
+    @include link-reset;
+    @include font-demi;
+    background-color: $color-primary-black;
+    color: $color-primary-white;
+    font-size: .75rem;
+    padding: .5rem;
+    border-radius: 5px;
+    margin-bottom: 4rem;
+    }
+}

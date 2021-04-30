@@ -17,6 +17,7 @@ const comments = [
 ]
 
 
+
 //function to help create some el & add classes
 function createElementWithClass (element, className) {
   const el = document.createElement(element);
