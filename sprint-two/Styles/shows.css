@@ -156,35 +156,36 @@ p {
   font-size: 2rem;
 }
 
-.card {
+.showCard {
   font-family: "AvenirNext LT Pro";
   font-weight: 400;
   width: 100%;
   color: #323232;
   border-bottom: 1px solid #E1E1E1;
+  padding-top: 1rem;
   padding-bottom: 1.25rem;
 }
-.card__title {
+.showCard__title {
   color: #AFAFAF;
   font-size: 0.6rem;
   padding: 0;
 }
-.card__date {
+.showCard__date {
   font-size: 0.75rem;
   padding: 0;
   padding-bottom: 0.5rem;
 }
-.card__venue {
+.showCard__venue {
   font-size: 0.75rem;
   padding: 0;
   padding-bottom: 0.5rem;
 }
-.card__location {
+.showCard__location {
   font-size: 0.75rem;
   padding: 0;
   padding-bottom: 1rem;
 }
-.card__button {
+.showCard__button {
   text-decoration: none;
   color: #FFFFFF;
   font-family: "AvenirNext LT Pro";

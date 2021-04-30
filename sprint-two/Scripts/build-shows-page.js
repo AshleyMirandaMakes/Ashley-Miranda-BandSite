@@ -39,37 +39,37 @@ const showsListEl = document.querySelector("#shows-list")
 
 //show card  creator
 function createShowCards(show) {
-  const cardEl = createElementWithClass("article", "card");
+  const cardEl = createElementWithClass("article", "showCard");
   showsListEl.appendChild(cardEl);
  
-  const cardTitleOne = createElementWithClass("h3", "card__title");
+  const cardTitleOne = createElementWithClass("h3", "showCard__title");
   cardTitleOne.innerText = "DATES";
   cardEl.appendChild(cardTitleOne);
   
-  const cardDate = createElementWithClass("h3", "card__date");
+  const cardDate = createElementWithClass("h3", "showCard__date");
   cardDate.innerText = show.date;
   cardEl.appendChild(cardDate);
 
-  const cardTitleTwo = createElementWithClass("h3", "card__title");
+  const cardTitleTwo = createElementWithClass("h3", "showCard__title");
   cardTitleTwo.innerText = "VENUE";
   cardEl.appendChild(cardTitleTwo);
   
-  const cardVenue = createElementWithClass("h3", "card__venue");
+  const cardVenue = createElementWithClass("h3", "showCard__venue");
   cardVenue.innerText = show.venue;
   cardEl.appendChild(cardVenue);
 
-  const cardTitleThree = createElementWithClass("h3", "card__title");
+  const cardTitleThree = createElementWithClass("h3", "showCard__title");
   cardTitleThree.innerText = "LOCATION";
   cardEl.appendChild(cardTitleThree);
 
-  const cardLocation = createElementWithClass("h3", "card__location");
+  const cardLocation = createElementWithClass("h3", "showCard__location");
   cardLocation.innerText = show.location;
   cardEl.appendChild(cardLocation);
 
-  const cardButton = createElementWithClass("a", "card__button")
+  const cardButton = createElementWithClass("a", "showCard__button")
   cardButton.href = "#";
   cardButton.innerText = "BUY TICKETS";
-  cardButton.classList.add("card__button");
+  cardButton.classList.add("showCard__button");
   cardEl.appendChild(cardButton);
 
   return cardEl;

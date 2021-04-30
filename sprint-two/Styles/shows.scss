@@ -114,11 +114,12 @@
   }
 }
 
-.card {
+.showCard {
   @include font-regular;
   width: 100%;
   color: $color-primary-black;
   border-bottom: 1px solid $color-secondary-mercury;
+  padding-top: 1rem;
   padding-bottom: 1.25rem;
   &__title {
    color: $color-primary-silver; 
