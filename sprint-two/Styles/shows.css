@@ -146,6 +146,12 @@ p {
     width: 60%;
   }
 }
+.shows {
+  width: 100%;
+  padding: 1rem;
+}
 .shows__title {
-  color: #323232;
+  color: #000000;
+  padding: 1rem 0rem;
+  font-size: 2rem;
 }/*# sourceMappingURL=shows.css.map */

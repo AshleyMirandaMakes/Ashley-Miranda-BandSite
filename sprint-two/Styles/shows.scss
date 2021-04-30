@@ -105,7 +105,11 @@
 }
 
 .shows {
+  width: 100%;
+  padding: 1rem;
   &__title {
-    color: $color-primary-black;
+    color: $color-secondary-dark-black;
+    padding: 1rem 0rem;
+    font-size: 2rem;
   }
 }

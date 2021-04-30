@@ -1,8 +1,12 @@
 const shows = [
   {
+    titleOne: "DATES",
     date: "Mon Sept 06 2021",
+    titleTwo: "VENUE",
     venue: "Ronald Lane",
+    titleThree: "LOCATION",
     location: "San Francisco, CA"
+
   },
   {
     date: "Tue Sept 21 2021",
@@ -31,37 +35,69 @@ const shows = [
   },
 ];
 
-//check object appears in the console.
-console.log(shows[0]);
+//check object appears in the console
 
-//id selections to link to html
-const showsListEl = document.getElementById("shows__list")
+//item id selection to link to html -- global
+const showsListEl = document.querySelector("#shows-list")
 
-//card creation 
-const showsCardEl = createElementWithClass("article", "shows__card");
-showsListEl.appendChild(showsCardEl);
+//show card  creator
+function createShowCards(show) {
+  //card creation
+  const cardEl = createElementWithClass("article", "shows__card");
+  showsListEl.appendChild(cardEl);
+ 
+  const cardTitleOne = createElementWithClass("h3", "card__title");
+  cardTitleOne.innerText = "DATES";
+  cardEl.appendChild(cardTitleOne);
+  
+  const cardDate = createElementWithClass("h3", "card__date");
+  cardDate.innerText = shows.date;
+  cardEl.appendChild(cardDate);
 
-//not working
-const showsCardTitle = createElementWithClass("h4", "card__title");
-showCardTitle.innerHTML = "DATES";
-showsCardEl.appendChild(showsCardTitle);
+  const cardTitleTwo = createElementWithClass("h3", "card__title");
+  cardTitleTwo.innerText = "VENUE";
+  cardEl.appendChild(cardTitleTwo);
+  
+  const cardVenue = createElementWithClass("h3", "card__venue");
+  cardVenue.innerText = shows.venue;
+  cardEl.appendChild(cardVenue);
 
-{/* <section class="shows__section" id="shows__list">
-       <article class="shows__card">
-         <h4 class="card__title">DATES</h4>
-         <h3 class="card__date">Sept 06 2021</h3>
-         <h4 class="card__title">VENUE</h4>
-         <h3 class="card__venue">Ronald Lane</h3>
-         <h4 class="card__title">VENUE</h4>
-         <h3 class="card__location">SF, CA</h3>
-         <a href="#" class="button">BUT TICKETS</a>
-       </article>
-      </section> */}
+  const cardTitleThree = createElementWithClass("h3", "card__title");
+  cardTitleThree.innerText = "LOCATION";
+  cardEl.appendChild(cardTitleThree);
 
+  const cardLocation = createElementWithClass("h3", "card__location");
+  cardLocation.innerText = shows.location;
+  cardEl.appendChild(cardLocation);
 
-      function createElementWithClass (element, className) {
-        const el = document.createElement(element);
-        el.classList.add(className);
-      
-        return el;
-      }
+  const cardButton = createElementWithClass("a", "card__button")
+  cardButton.href = "#";
+  cardButton.innerText = "BUY TICKETS";
+  cardButton.classList.add("card__button");
+  cardEl.appendChild(cardButton);
+
+  return cardEl;
+  };
+
+//function to render show to the page 
+function displayShows() {
+  // showsListEl.innerHTML = "";
+  
+  //render all shows
+  for (let i = 0; i < shows.length; i++) {
+    let cardEl = createShowCards(shows[i]);
+    showsListEl.appendChild(cardEl);
+  };
+}
+//invoke the function, so it appears on page load
+displayShows();
+
+console.log(shows)
+
+//function to help create some el & add classes
+function createElementWithClass (element, className) {
+  const el = document.createElement(element);
+  el.classList.add(className);
+
+  return el;
+}
