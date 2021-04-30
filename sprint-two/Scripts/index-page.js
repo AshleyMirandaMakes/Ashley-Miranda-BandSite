@@ -26,6 +26,20 @@ function createElementWithClass (element, className) {
   return el;
 }
 
+// function timeChanger(comment) {
+//   const time = comment.timestamp
+//   const milliseconds = (time * 1000);
+//   let commentTime = new Date(milliseconds) 
+//   let month = commentTime.getMonth();
+//   let year = commentTime.getFullYear(); //doesn't work, how to turn into current year?
+//   let day = commentTime.getDate();
+//   console.log(commentTime);
+//   const humanDateFormat = `${month.toLocaleString()}` + "/" + `${day.toLocaleString()}` + "/" + `${year.toLocaleString()}`;
+//   return humanDateFormat;
+// }
+
+// console.log(timeChanger(comments[0]));
+
 //this function creates comment cards
 function createCommentCards(comment) {
   //card creation
@@ -45,10 +59,12 @@ function createCommentCards(comment) {
   cardName.innerText = comment.name;
   cardContentTop.appendChild(cardName);
   
-  const cardTimestamp = createElementWithClass("h4", "comment__timestamp");
-  cardTimestamp.innerText = comment.timestamp;
-  cardContentTop.appendChild(cardTimestamp);
-  //learn how to manipulate this timestamp
+  // const cardTimestamp = createElementWithClass("h4", "comment__timestamp");
+  // //cardTimestamp = 0;  Nan not assigned value?
+  // cardTimestamp.innerText = timeChanger(comment.timestamp);
+  // console.log( typeof comment.timestamp);
+  // cardContentTop.appendChild(cardTimestamp);
+  // //learn how to manipulate this timestamp
   
   const cardContentBottom = createElementWithClass("div", "comment__content--bottom");
   cardContent.appendChild(cardContentBottom);
@@ -60,9 +76,9 @@ function createCommentCards(comment) {
   return cardEl;
   };
 
-
 //item id selection to link to html -- global
 const commentListEl = document.querySelector("#comment-list")
+
 
 //function to render comment to the page 
 function displayComment() {
@@ -94,8 +110,19 @@ function handleFormSubmission(event) {
     
   comments.unshift(commentData);
   displayComment();
+
+  //resets the form at the end of the reset/submit event
+  resetForm(event);
 };
 
+function resetForm() {
+
+  document.getElementById("comment-form").reset();
+}
+
 formEl.addEventListener('submit', handleFormSubmission);
+formEl.addEventListener('submit', resetForm)
+
+
 
 

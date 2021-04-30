@@ -31,8 +31,8 @@ const shows = [
   },
 ];
 
-//check object appears in the console
-console.log(shows.date);
+// //check object appears in the console
+// console.log(shows.date);
 
 //item id selection to link to html -- global
 const showsListEl = document.querySelector("#shows-list")
