@@ -399,6 +399,12 @@ p {
     margin: 0 auto;
   }
 }
+@media screen and (min-width: 1280px) {
+  .comment__container {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
 .comment__card {
   display: flex;
   border-bottom: 1px solid #E1E1E1;
@@ -466,6 +472,12 @@ p {
 @media screen and (min-width: 767px) {
   .form__container {
     max-width: 580px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .form__container {
+    max-width: 520px;
     margin: 0 auto;
   }
 }

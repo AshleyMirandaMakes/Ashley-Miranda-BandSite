@@ -18,17 +18,13 @@ const comments = [
 
 
 
-//function to help create some el & add classes
+//function to help create some elements & add classes
 function createElementWithClass (element, className) {
   const el = document.createElement(element);
   el.classList.add(className);
 
   return el;
 }
-
-
- 
-
 
 //this function creates comment cards
 function createCommentCards(comment) {
@@ -76,7 +72,6 @@ const commentListEl = document.querySelector("#comment-list")
 
 //function to render comment to the page 
 function displayComment() {
-  //clear comments for not duplicates goes here?
   //clear the comments list-- no duplicates
   commentListEl.innerHTML = "";
   
@@ -86,7 +81,6 @@ function displayComment() {
     commentListEl.appendChild(cardEl);
   };
 }
-//invoke the function, so it appears on page load
 displayComment();
 
 //comment form
@@ -110,7 +104,6 @@ function handleFormSubmission(event) {
 };
 
 function resetForm() {
-
   document.getElementById("comment-form").reset();
 }
 

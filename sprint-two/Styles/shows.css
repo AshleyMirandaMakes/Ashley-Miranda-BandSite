@@ -99,27 +99,27 @@ p {
 
 .hero {
   max-width: 100%;
-  min-height: 30vh;
+  min-height: 280px;
   max-height: auto;
 }
 .hero__container {
   width: 100%;
-  height: 40vh;
+  min-height: 280px;
 }
 .hero__image {
   background-position: 50% 20%;
   width: 100%;
-  height: 40vh;
+  min-height: 280px;
 }
 .hero__content {
   position: relative;
   padding: 1.5rem 0.75rem;
   display: flex;
   flex-direction: column;
-  margin-top: -17.65rem;
+  margin-top: -17.75rem;
   background: rgba(0, 0, 0, 0.3);
   width: 100%;
-  height: 40vh;
+  height: 280px;
 }
 .hero__subtitle {
   font-family: "AvenirNext LT Pro";
@@ -130,8 +130,9 @@ p {
 }
 .hero__title {
   font-family: "AvenirNext LT Pro";
-  font-weight: 400;
+  font-weight: 600;
   width: 70%;
+  margin-top: 0.25rem;
   position: relative;
   color: #FFFFFF;
   padding: 1rem 0rem;
@@ -151,7 +152,7 @@ p {
   padding: 1rem;
 }
 .shows__title {
-  color: #000000;
+  color: #323232;
   padding: 1rem 0rem;
   font-size: 2rem;
 }

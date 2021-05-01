@@ -247,6 +247,10 @@
       max-width: 580px;
       margin: 0 auto;
    }
+   @include desktop {
+    max-width: 520px;
+    margin: 0 auto;
+   }
   }
   &__card {
     display: flex;
@@ -309,6 +313,10 @@
     @include tablet {
       max-width: 580px;
       margin: 0 auto;
+   }
+   @include desktop {
+    max-width: 520px;
+    margin: 0 auto;
    }
   }
   &__image{

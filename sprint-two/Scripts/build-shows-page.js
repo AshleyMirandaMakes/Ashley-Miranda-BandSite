@@ -31,12 +31,6 @@ const shows = [
   },
 ];
 
-// //check object appears in the console
-// console.log(shows.date);
-
-
-// is the main ok?
-
 //item id selection to link to html -- global
 
 const mainEl = document.querySelector("main");
@@ -46,7 +40,7 @@ mainEl.appendChild(showsEl);
 const showsTitleEl = createElementWithClass("h2", "shows__title");
 showsEl.appendChild(showsTitleEl);
 
-const showsListEl = createElementWithClass("article", "shows");
+const showsListEl = createElementWithClass("article", "shows__list");
 showsEl.appendChild(showsListEl);
 
 
