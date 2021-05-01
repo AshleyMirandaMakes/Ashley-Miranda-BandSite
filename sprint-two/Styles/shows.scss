@@ -111,9 +111,14 @@
   width: 100%;
   padding: 1rem;
   &__title {
-    color: $color-primary-black;
-    padding: 1rem 0rem;
-    font-size: 2rem;
+    color: $color-secondary-dark-black;
+    padding: .75rem 0 .25rem 0;
+    font-size: 2.5rem;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 }
 
@@ -122,8 +127,8 @@
   width: 100%;
   color: $color-primary-black;
   border-bottom: 1px solid $color-secondary-mercury;
-  padding-top: 1rem;
-  padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.5rem;
   &__title {
    color: $color-primary-silver; 
    font-size: .6rem;
@@ -132,26 +137,41 @@
   &__date{
     font-size: .75rem;
     padding: 0;
-    padding-bottom: .5rem;
+    padding-bottom: .25rem;
   }
   &__venue{
     font-size: .75rem;
     padding: 0;
-    padding-bottom: .5rem;
+    padding-bottom: .25rem;
   }
   &__location{
     font-size: .75rem;
     padding: 0;
     padding-bottom: 1rem;
   }
-  &__button{
-    @include link-reset;
-    @include font-demi;
-    background-color: $color-primary-black;
-    color: $color-primary-white;
-    font-size: .75rem;
-    padding: .5rem;
-    border-radius: 5px;
-    margin-bottom: 4rem;
+    &__button{
+      @include link-reset;
+      @include font-demi;
+      min-width: 100%;
+      background-color: $color-primary-black;
+      border-color: $color-primary-black;
+      color: $color-primary-white;
+      padding: .75rem 5.87rem;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+      height: 40px;
+      font-size: .85rem;
+      &:hover {
+        background-color: $color-secondary-dark-black;
+        border-color:  $color-secondary-dark-black;
+      }
+      @include tablet {
+        min-width: 150px;
+        max-width: 200px;
+        align-self:flex-end;
+        padding: .5rem;
+        margin: .45rem 0;
+        border-radius: 6px;
+      }
     }
 }

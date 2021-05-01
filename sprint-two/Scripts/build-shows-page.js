@@ -38,6 +38,7 @@ const showsEl = createElementWithClass("section", "shows");
 mainEl.appendChild(showsEl);
 
 const showsTitleEl = createElementWithClass("h2", "shows__title");
+showsTitleEl.innerText = "Shows";
 showsEl.appendChild(showsTitleEl);
 
 const showsListEl = createElementWithClass("article", "shows__list");
