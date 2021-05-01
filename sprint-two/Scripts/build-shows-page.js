@@ -34,8 +34,22 @@ const shows = [
 // //check object appears in the console
 // console.log(shows.date);
 
+
+// is the main ok?
+
 //item id selection to link to html -- global
-const showsListEl = document.querySelector("#shows-list")
+
+const mainEl = document.querySelector("main");
+const showsEl = createElementWithClass("section", "shows");
+mainEl.appendChild(showsEl);
+
+const showsTitleEl = createElementWithClass("h2", "shows__title");
+showsEl.appendChild(showsTitleEl);
+
+const showsListEl = createElementWithClass("article", "shows");
+showsEl.appendChild(showsListEl);
+
+
 
 //show card  creator
 function createShowCards(show) {
@@ -66,7 +80,9 @@ function createShowCards(show) {
   cardLocation.innerText = show.location;
   cardEl.appendChild(cardLocation);
 
-  const cardButton = createElementWithClass("a", "showCard__button")
+  const cardButton = createElementWithClass("a", "showCard__button");
+  //for (let i = 0; i > comments.length; i++)
+  
   cardButton.href = "#";
   cardButton.innerText = "BUY TICKETS";
   cardButton.classList.add("showCard__button");
@@ -87,7 +103,11 @@ function displayShows() {
 
 displayShows();
 
-
+const button = document.querySelector('.showCard__button');
+button.addEventListener("click", (event) => {
+  console.log(`Button clicked at ${event.clientX}, ${event.clientY}`);
+  console.log(event);
+});
 
 
 function createElementWithClass (element, className) {

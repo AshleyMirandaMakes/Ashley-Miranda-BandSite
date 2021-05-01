@@ -310,7 +310,7 @@ p {
 }
 
 .gallery {
-  background-color: #AFAFAF;
+  background-color: #FAFAFA;
   width: 100%;
   padding: 1rem;
 }
@@ -382,8 +382,8 @@ p {
   width: 100%;
 }
 .form__container {
-  padding: 1rem;
   display: flex;
+  padding: 1rem 0rem;
   width: 100%;
   border-bottom: 1px solid #E1E1E1;
 }
@@ -393,7 +393,7 @@ p {
   border-radius: 50%;
   background-image: url("../Assets/Images/Mohan-muruge.jpg");
   padding: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 .form__content {
   display: flex;
@@ -405,30 +405,57 @@ p {
   font-family: "AvenirNext LT Pro";
   font-weight: 600;
   color: #AFAFAF;
-  font-size: 0.55rem;
-  padding-bottom: 0.5rem;
+  font-size: 0.6rem;
+  padding-bottom: 4px;
 }
 .form__input {
   display: block;
   margin: 0.35rem 0rem;
+  min-height: 36px;
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
   border: 1px solid #E1E1E1;
-  border-radius: 3px;
+  border-radius: 4px;
   background-color: #FAFAFA;
+}
+.form__input:active {
+  border: 1px solid #323232;
+}
+.form__input:hover {
+  border: 1px solid #323232;
+}
+@media screen and (min-width: 767px) {
+  .form__input {
+    min-height: 48px;
+    padding: 1rem;
+  }
 }
 .form__input--special {
   height: 5.5rem;
 }
 .form__button {
   background-color: #323232;
+  border-color: #323232;
   color: #FFFFFF;
   padding: 0.5rem;
-  border-radius: 5px;
+  border-radius: 4px;
+  height: 40px;
+}
+.form__button:hover {
+  background-color: #000000;
+  border-color: #000000;
+}
+@media screen and (min-width: 1280px) {
+  .form__button {
+    min-width: 150px;
+  }
 }
 
+.comment {
+  padding: 1rem;
+}
 .comment__title {
-  padding: 0.75rem 1rem 0rem 1rem;
   color: #323232;
 }
 @media screen and (min-width: 767px) {
@@ -443,20 +470,26 @@ p {
   }
 }
 .comment__container {
-  padding: 1rem;
+  padding: 0rem;
 }
 .comment__card {
   display: flex;
   border-bottom: 1px solid #E1E1E1;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 0rem;
 }
 .comment__image {
-  width: 35px;
-  height: 35px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background-color: #E1E1E1;
   padding: 1rem;
+}
+@media screen and (min-width: 767px) {
+  .comment__image {
+    width: 48px;
+    height: 48px;
+  }
 }
 .comment__content {
   padding-left: 1rem;
@@ -470,10 +503,11 @@ p {
 .comment__name {
   font-family: "AvenirNext LT Pro";
   font-weight: 600;
+  color: #323232;
   font-size: 0.8rem;
 }
 .comment__timestamp {
-  color: #E1E1E1;
+  color: #AFAFAF;
 }
 .comment__content--bottom {
   display: flex;

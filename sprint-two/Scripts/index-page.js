@@ -26,19 +26,9 @@ function createElementWithClass (element, className) {
   return el;
 }
 
-// function timeChanger(comment) {
-//   const time = comment.timestamp
-//   const milliseconds = (time * 1000);
-//   let commentTime = new Date(milliseconds) 
-//   let month = commentTime.getMonth();
-//   let year = commentTime.getFullYear(); //doesn't work, how to turn into current year?
-//   let day = commentTime.getDate();
-//   console.log(commentTime);
-//   const humanDateFormat = `${month.toLocaleString()}` + "/" + `${day.toLocaleString()}` + "/" + `${year.toLocaleString()}`;
-//   return humanDateFormat;
-// }
 
-// console.log(timeChanger(comments[0]));
+ 
+
 
 //this function creates comment cards
 function createCommentCards(comment) {
@@ -58,14 +48,18 @@ function createCommentCards(comment) {
   const cardName = createElementWithClass("h4", "comment__name");
   cardName.innerText = comment.name;
   cardContentTop.appendChild(cardName);
-  
-  // const cardTimestamp = createElementWithClass("h4", "comment__timestamp");
-  // //cardTimestamp = 0;  Nan not assigned value?
-  // cardTimestamp.innerText = timeChanger(comment.timestamp);
-  // console.log( typeof comment.timestamp);
-  // cardContentTop.appendChild(cardTimestamp);
-  // //learn how to manipulate this timestamp
-  
+
+  const cardTimestamp = createElementWithClass("h4", "comment__timestamp");
+  // let objectArrayTimestamp = comment.timestamp;
+  // console.log(typeof objectArrayTimestamp)
+  // objectArrayTimestamp = String(objectArrayTimestamp);
+  // console.log(typeof objectArrayTimestamp)
+  // objectArrayTimestamp.toLocaleDateString("en-US");
+  let timeStamp = new Date().toLocaleDateString("en-US");
+  console.log(typeof timeStamp)
+  cardTimestamp.innerText = timeStamp;
+  cardContentTop.appendChild(cardTimestamp);
+
   const cardContentBottom = createElementWithClass("div", "comment__content--bottom");
   cardContent.appendChild(cardContentBottom);
   
