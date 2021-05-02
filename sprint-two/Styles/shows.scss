@@ -130,6 +130,17 @@
 .shows {
   width: 100%;
   padding: 1rem;
+  &__headings {
+    @include tablet {
+      max-width: 725px;
+      margin: 0 auto;
+    }
+    @include desktop{
+      display: flex;
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+  }
   &__title {
     color: $color-secondary-dark-black;
     padding: .75rem 0 .25rem 0;
@@ -141,9 +152,10 @@
       padding: 2rem 0 1rem 0rem;
     }
     @include desktop {
-      padding-top: 2rem;
-        max-width: 1010px;
-        margin: 0 auto;
+      padding-top: 1rem;
+      max-width: 10%;
+      font-size: 1.85rem;
+      margin-left: 0;
     }
   }
   &__subtitle-list {
@@ -159,14 +171,23 @@
         color: $color-primary-silver;
         visibility: visible;
         font-size: .725rem;
-        padding: 1.5rem 0rem .75rem 0rem;
-        margin-left: 1.25rem;
+        padding: 1.5rem 0rem .75rem 1.25rem;
         height: auto;
+        max-width: 540px;
         width: 75%;
+      }
+      @include desktop {
+        padding-top: 2rem;
+        padding-left: 2rem;
+        min-width: 820px;
+        max-width: 90%;
       }
     &--element {
       @include tablet{
-        width: 32.2%;
+        width: 33.3%;
+      }
+      @include desktop {
+        max-width: 25.5%;
       }
     }
   }
@@ -181,7 +202,7 @@
     @include desktop {
       max-width: 1010px;
       margin: 0 auto;
-      padding-left: 20%;
+      padding-left: 18%;
     }
   }
 }
@@ -201,7 +222,8 @@
     justify-content: space-between;
    }
    @include desktop {
-    padding: .5rem 0;
+    border-bottom: 1px solid $color-primary-silver;
+    padding:0;
    }
   &__title {
    color: $color-primary-silver; 

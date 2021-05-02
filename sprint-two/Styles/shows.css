@@ -32,7 +32,6 @@ html {
   padding: 0;
   font-family: "AvenirNext LT Pro";
   font-weight: 400;
-  border: 1px solid lavender;
 }
 
 h1 {
@@ -253,6 +252,19 @@ p {
   width: 100%;
   padding: 1rem;
 }
+@media screen and (min-width: 767px) {
+  .shows__headings {
+    max-width: 725px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__headings {
+    display: flex;
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+}
 .shows__title {
   color: #000000;
   padding: 0.75rem 0 0.25rem 0;
@@ -268,9 +280,10 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .shows__title {
-    padding-top: 2rem;
-    max-width: 1010px;
-    margin: 0 auto;
+    padding-top: 1rem;
+    max-width: 10%;
+    font-size: 1.85rem;
+    margin-left: 0;
   }
 }
 .shows__subtitle-list {
@@ -287,15 +300,28 @@ p {
     color: #AFAFAF;
     visibility: visible;
     font-size: 0.725rem;
-    padding: 1.5rem 0rem 0.75rem 0rem;
-    margin-left: 1.25rem;
+    padding: 1.5rem 0rem 0.75rem 1.25rem;
     height: auto;
+    max-width: 540px;
     width: 75%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__subtitle-list {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    min-width: 820px;
+    max-width: 90%;
   }
 }
 @media screen and (min-width: 767px) {
   .shows__subtitle-list--element {
-    width: 32.2%;
+    width: 33.3%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__subtitle-list--element {
+    max-width: 25.5%;
   }
 }
 .shows__list {
@@ -313,7 +339,7 @@ p {
   .shows__list {
     max-width: 1010px;
     margin: 0 auto;
-    padding-left: 20%;
+    padding-left: 18%;
   }
 }
 
@@ -337,7 +363,8 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .showCard {
-    padding: 0.5rem 0;
+    border-bottom: 1px solid #AFAFAF;
+    padding: 0;
   }
 }
 .showCard__title {

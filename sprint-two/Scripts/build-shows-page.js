@@ -38,14 +38,18 @@ const mainEl = document.querySelector("main");
 const showsEl = createElementWithClass("section", "shows");
 mainEl.appendChild(showsEl);
 
+//show titles div-- for styling
+const showsHeadings = createElementWithClass("div", "shows__headings");
+showsEl.appendChild(showsHeadings);
+
 const showsTitleEl = createElementWithClass("h2", "shows__title");
 showsTitleEl.innerText = "Shows";
-showsEl.appendChild(showsTitleEl);
+showsHeadings.appendChild(showsTitleEl);
 
 //---------
 //show subtitles - for tablet and desktop only
 const showsSubtitleListEl = createElementWithClass("ul", "shows__subtitle-list");
-showsEl.appendChild(showsSubtitleListEl);
+showsHeadings.appendChild(showsSubtitleListEl);
 
 const subtitles = ["DATES", "VENUE", "LOCATION"];
 console.log(subtitles);
