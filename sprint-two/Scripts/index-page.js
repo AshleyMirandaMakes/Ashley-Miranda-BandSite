@@ -46,13 +46,7 @@ function createCommentCards(comment) {
   cardContentTop.appendChild(cardName);
 
   const cardTimestamp = createElementWithClass("h4", "comment__timestamp");
-  // let objectArrayTimestamp = comment.timestamp;
-  // console.log(typeof objectArrayTimestamp)
-  // objectArrayTimestamp = String(objectArrayTimestamp);
-  // console.log(typeof objectArrayTimestamp)
-  // objectArrayTimestamp.toLocaleDateString("en-US");
   let timeStamp = new Date().toLocaleDateString("en-US");
-  console.log(typeof timeStamp)
   cardTimestamp.innerText = timeStamp;
   cardContentTop.appendChild(cardTimestamp);
 
@@ -88,17 +82,6 @@ const formEl = document.querySelector("#comment-form");
 
 function handleFormSubmission(event) {
   event.preventDefault();
-
-  // these don't work?
-  // //add an if statement about inputs being empty
-  // if (event.target.fullName === "" || null) {
-  //   alert('Please fill out your name.');
-  //   return false;
-  // }
-  // if (event.target.fullComment === false) {
-  // alert('Please fill out your name.');
-  // return;
-  // }
    
   const commentData = {
     name: event.target.fullName.value,
@@ -106,11 +89,26 @@ function handleFormSubmission(event) {
   };
     
   comments.unshift(commentData);
-  displayComment();
 
-  //resets the form at the end of the reset/submit event
+  if (requiredInput === "true") {
+    displayComment();
+  }
   resetForm(event);
 };
+
+//form validation function
+function requiredInput() {
+  event.preventDefault();
+  //ask why these are crossed out
+  const formNameInput = event.target.fullName.value;
+  const formCommentInput = event.target.fullComment.value;
+
+  if (formNameInput || formCommentInput === "")
+  {
+  alert("Please input your comment");
+  return false;
+  }
+}
 
 function resetForm() {
   document.getElementById("comment-form").reset();

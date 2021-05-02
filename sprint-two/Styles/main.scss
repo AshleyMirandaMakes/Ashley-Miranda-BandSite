@@ -323,10 +323,8 @@
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background-image: url('../Assets/Images/Mohan-muruge.jpg');
-    //object-fit: contain; HMMMM
-    padding: 1rem;
-    margin-top: 1.25rem;
+    margin-top: .65rem;
+    object-fit: center;
     @include tablet{
       margin-right: .5rem;
       width: 48px;
@@ -362,12 +360,11 @@
     border-radius: 4px;
     background-color: $color-secondary-alabaster;
     &:active{
-    border: 1px solid $color-primary-black;
-    // doesn't seem to work?
+    border: 2px solid $color-primary-black;
+    //doesn't seem to work?
     }
     &:hover{
       border: 1px solid $color-primary-black;
-      // doesn't seem to work?
     }
     @include tablet {
       min-height: 48px;

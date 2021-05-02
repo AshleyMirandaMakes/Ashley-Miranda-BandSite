@@ -69,7 +69,7 @@ function displaySubtitleEl() {
 displaySubtitleEl();
 
 //---------
-// show cards - longest function even
+// show cards - longest function ever
 const showsListEl = createElementWithClass("article", "shows__list");
 showsEl.appendChild(showsListEl);
 
@@ -106,7 +106,7 @@ function createShowCards(show) {
   cardButton.innerText = "BUY TICKETS";
   cardButton.addEventListener('click', (event) => {
     event.stopPropagation();
-    console.log('Button clicked event: ', show.venue);
+    console.log('Venue clicked:', show.venue);
   })
   cardEl.appendChild(cardButton);
 

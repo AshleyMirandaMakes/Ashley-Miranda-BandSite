@@ -485,9 +485,9 @@ p {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-image: url("../Assets/Images/Mohan-muruge.jpg");
-  padding: 1rem;
-  margin-top: 1.25rem;
+  margin-top: 0.65rem;
+  -o-object-fit: center;
+     object-fit: center;
 }
 @media screen and (min-width: 767px) {
   .form__image {
@@ -531,7 +531,7 @@ p {
   background-color: #FAFAFA;
 }
 .form__input:active {
-  border: 1px solid #323232;
+  border: 2px solid #323232;
 }
 .form__input:hover {
   border: 1px solid #323232;
