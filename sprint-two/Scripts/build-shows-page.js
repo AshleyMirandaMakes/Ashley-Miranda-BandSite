@@ -31,8 +31,9 @@ const shows = [
   },
 ];
 
-//item id selection to link to html -- global
 
+
+//item id selection to link to html -- global
 const mainEl = document.querySelector("main");
 const showsEl = createElementWithClass("section", "shows");
 mainEl.appendChild(showsEl);
@@ -40,6 +41,24 @@ mainEl.appendChild(showsEl);
 const showsTitleEl = createElementWithClass("h2", "shows__title");
 showsTitleEl.innerText = "Shows";
 showsEl.appendChild(showsTitleEl);
+
+//show subtitles - for tablet and desktop 
+const showsSubtitleListEl = createElementWithClass("ul", "shows__subtitle-list");
+showsEl.appendChild(showsSubtitleListEl);
+
+//HMMMMMMM
+// function createSubtitlesAndAppend() { 
+//   const subtitles = ["DATES", "VENUE", "LOCATION"];
+//   console.log(subtitles)
+//   for (let i = 0; i > subtitles.length; i++) {
+//     const showsSubtitleEl = createElementWithClass("li", "shows__subtitle-list--element");
+//     showsSubtitleEl.innerText = subtitles[i];
+//     showsSubtitleListEl.appendChild(showsSubtitleEl);
+//     console.log(showsSubtitleEl);
+//     return showsSubtitleEl;
+//   }
+// }
+// createSubtitlesAndAppend();
 
 const showsListEl = createElementWithClass("article", "shows__list");
 showsEl.appendChild(showsListEl);

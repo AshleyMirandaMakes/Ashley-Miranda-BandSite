@@ -8,10 +8,11 @@
   max-width: 100%;
   min-height: 280px;
   max-height: auto;
-  //   @include tablet {
-  //   width: 100%;
-  //   height: auto;
-  // }
+    @include tablet {
+    width: 100%;
+    min-height: 300px;
+    max-height: 485px;
+  }
   // @include desktop{
   //   width: 100%;
   //   height: auto;
@@ -20,12 +21,12 @@
   &__container{
     width: 100%;
     min-height: 280px;
-    //max-height: 40vh;
-    // max-height: auto;
-    //  @include tablet {
-    //    height: auto;
-    //   max-height: 518px;
-    // }
+    @include tablet {
+      width: 100%;
+      min-height: 300px;
+      max-height: 485px;
+    //  max-height: auto;
+    }
     // @include desktop{
     //   height: auto;
     //   height: 625px;
@@ -36,12 +37,12 @@
     background-position: 50% 20%;
     width: 100%;
     min-height: 280px;
-    //height: 40vh;
-    // max-height: auto;
-    // @include tablet {
-    //   height: auto;
-    //   max-height: 510px;
-    // }
+    @include tablet {
+      width: 100%;
+      min-height: 300px;
+      max-height: 485px;
+     // max-height: auto;
+    }
     // @include desktop{
     //   height: auto;
     //   max-height: 625px;
@@ -60,11 +61,13 @@
     // height: auto;
     // height: 200px; 
     // padding: 1rem;
-    // @include tablet {
-    //   height: 510px;
-    //   max-height: 510px;
-    //   margin-top: -32.15rem;
-    // }
+    @include tablet {
+      width: 100%;
+      min-height: 485px;
+      max-height: 485px;
+      margin-top: -30.3rem;
+      padding: 3.25rem 2.5rem;
+    }
     // @include desktop{
     //   height: 625px;
     //   max-height: 625px;
@@ -78,6 +81,9 @@
     position: relative;
     color: $color-secondary-alabaster;
     padding-left: .25rem;
+    @include tablet {
+      padding-left: 0;
+    }
   }
   &__title {
     // @include font-regular;
@@ -87,9 +93,11 @@
     position: relative;
     color: $color-primary-white; 
     padding: 1rem 0rem;
-    // @include tablet {
-    //   padding-left: 1.25rem
-    // }
+    @include tablet {
+      padding-left: 0;
+      margin-top: 0;
+      width: 75%;
+    }
     // @include desktop {
     //   width: 600px;
     //   max-width: 1200px;
@@ -101,6 +109,8 @@
     max-height: 45%;
     @include tablet {
         width: 60%;
+        max-height: 37%;
+        margin-top: 2rem;
         @include desktop {
         }
     }
@@ -114,11 +124,20 @@
     color: $color-secondary-dark-black;
     padding: .75rem 0 .25rem 0;
     font-size: 2.5rem;
+    @include tablet {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 2.25rem;
+    }
   }
   &__list {
     display: flex;
     flex-direction: column;
     width: 100%;
+    @include tablet {
+      max-width: 700px;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -129,27 +148,59 @@
   border-bottom: 1px solid $color-secondary-mercury;
   padding-top: 1.25rem;
   padding-bottom: 1.5rem;
+  @include tablet{
+    display: flex;
+    padding: 0;
+    padding-left: .25rem;
+    //remove that padding
+    justify-content: space-between;
+   }
   &__title {
    color: $color-primary-silver; 
    font-size: .6rem;
    padding: 0;
+   @include tablet{
+    visibility: hidden;
+    font-size: 0rem;
+    padding: 0;
+    height: 0;
+   }
   }
   &__date{
     font-size: .75rem;
     padding: 0;
     padding-bottom: .25rem;
+    @include tablet{
+      display: flex;
+      align-items: center;
+      width: 25%;
+      font-size: .825rem;
+     }
   }
   &__venue{
     font-size: .75rem;
     padding: 0;
     padding-bottom: .25rem;
+    @include tablet{
+      display: flex;
+      align-items: center;
+      width: 25%;
+      font-size: .825rem;
+     }
   }
   &__location{
     font-size: .75rem;
     padding: 0;
     padding-bottom: 1rem;
+    @include tablet{
+      display: flex;
+      align-items: center;
+      padding-bottom: 0rem;
+      width: 25%;
+      font-size: .825rem;
+     }
   }
-    &__button{
+   &__button{
       @include link-reset;
       @include font-demi;
       min-width: 100%;
@@ -166,12 +217,13 @@
         border-color:  $color-secondary-dark-black;
       }
       @include tablet {
+        @include flex-center;
         min-width: 150px;
-        max-width: 200px;
-        align-self:flex-end;
+        max-width: 190px;
+        align-self: flex-end;
+        margin:.5rem;
         padding: .5rem;
-        margin: .45rem 0;
-        border-radius: 6px;
+        border-radius: 4px;
       }
     }
 }
