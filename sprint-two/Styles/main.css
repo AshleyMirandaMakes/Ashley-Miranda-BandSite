@@ -390,19 +390,27 @@ p {
     padding-top: 2rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .comment__title {
+    margin: 0 auto;
+    max-width: 1080px;
+  }
+}
 .comment__container {
+  margin: 0 auto;
   padding: 0rem;
+  max-width: 500px;
 }
 @media screen and (min-width: 767px) {
   .comment__container {
-    max-width: 580px;
     margin: 0 auto;
+    max-width: 580px;
   }
 }
 @media screen and (min-width: 1280px) {
   .comment__container {
-    max-width: 520px;
     margin: 0 auto;
+    max-width: 520px;
   }
 }
 .comment__card {
@@ -464,21 +472,23 @@ p {
   width: 100%;
 }
 .form__container {
+  margin: 0 auto;
   display: flex;
   padding: 1rem 0rem;
   width: 100%;
   border-bottom: 1px solid #E1E1E1;
+  max-width: 500px;
 }
 @media screen and (min-width: 767px) {
   .form__container {
-    max-width: 580px;
     margin: 0 auto;
+    max-width: 580px;
   }
 }
 @media screen and (min-width: 1280px) {
   .form__container {
-    max-width: 520px;
     margin: 0 auto;
+    max-width: 520px;
   }
 }
 .form__image {

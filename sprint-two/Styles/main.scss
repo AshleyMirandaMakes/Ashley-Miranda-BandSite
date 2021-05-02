@@ -66,7 +66,7 @@
     }
   }
   &__title {
-    @include margin-auto; /// hmmmm doesn't seem to work
+    @include margin-auto;
     position: absolute;
     color: $color-primary-white;
     z-index: 5;
@@ -176,7 +176,6 @@
 
 .gallery {
   background-color: $color-secondary-alabaster;
-  //fix color
   width: 100%;
   padding: 1rem;
   &__title {
@@ -240,16 +239,22 @@
       padding-left: 2rem;
       padding-top: 2rem;
     }
+    @include desktop {
+      @include margin-auto;
+      max-width: 1080px;
+    }
   }
   &__container { 
+    @include margin-auto;
     padding: 0rem;
+    max-width: 500px;
     @include tablet {
+      @include margin-auto;
       max-width: 580px;
-      margin: 0 auto;
    }
    @include desktop {
+    @include margin-auto;
     max-width: 520px;
-    margin: 0 auto;
    }
   }
   &__card {
@@ -257,7 +262,6 @@
     border-bottom: 1px solid $color-secondary-mercury;
     width: 100%;
     padding: 1rem 0rem;
-    // check with a list set
     @include tablet{
       padding: 1.5rem 0rem;
     }
@@ -304,19 +308,20 @@
 
 .form {
   width: 100%;
-  //color: $color-primary-black; input color black?
   &__container {
+    @include margin-auto;
     display: flex;
     padding: 1rem 0rem;
     width: 100%;
     border-bottom: 1px solid $color-secondary-mercury;
+    max-width: 500px;
     @include tablet {
+      @include margin-auto;
       max-width: 580px;
-      margin: 0 auto;
    }
    @include desktop {
+    @include margin-auto;
     max-width: 520px;
-    margin: 0 auto;
    }
   }
   &__image{

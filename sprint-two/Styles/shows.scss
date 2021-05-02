@@ -71,7 +71,7 @@
       width: 100%;
       min-height: 625px;
       max-height: 625px;
-      margin-top: -39.3rem;
+      margin-top: -39rem;
       display: flex;
       flex-direction: row;
       padding: 8rem 7rem;
@@ -80,9 +80,10 @@
   &__headings {
     height: 50%;
     @include desktop {
+      @include margin-auto;
+      padding-top: 4rem;
       flex-direction: column;
       width: 50%;
-      margin: auto 0;
     }
   }
   &__subtitle {
@@ -95,6 +96,7 @@
     }
     @include desktop {
       width: 100%;
+      padding-bottom: .5rem;
     }
   }
   &__title {
@@ -126,7 +128,7 @@
     @include desktop {
       max-width: 40%;
       margin-left: 6rem;
-      margin-top: 9rem; 
+      margin-top: 6rem; 
     } 
 }
 }
@@ -136,24 +138,24 @@
   padding: 1rem;
   &__headings {
     @include tablet {
+      @include margin-auto;
       max-width: 725px;
-      margin: 0 auto;
     }
     @include desktop{
+      @include margin-auto;
       display: flex;
       max-width: 1060px;
-      margin: 0 auto;
     }
   }
   &__title {
+    @include margin-auto;
     color: $color-secondary-dark-black;
     padding: .75rem 0 .25rem 0;
     font-size: 2.5rem;
     max-width: 350px;
-    margin: 0 auto;
     @include tablet {
+      @include margin-auto;
       max-width: 700px;
-      margin: 0 auto;
       font-size: 2.25rem;
       padding: 2rem 0 1rem 0rem;
     }
@@ -198,18 +200,18 @@
     }
   }
   &__list {
+    @include margin-auto;
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 274px;
-    margin: 0 auto;
     @include tablet {
+      @include margin-auto;
       max-width: 700px;
-      margin: 0 auto;
     }
     @include desktop {
+      @include margin-auto;
       max-width: 1010px;
-      margin: 0 auto;
       padding-left: 18%;
     }
   }

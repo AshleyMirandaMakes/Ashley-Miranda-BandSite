@@ -180,7 +180,7 @@ p {
     width: 100%;
     min-height: 625px;
     max-height: 625px;
-    margin-top: -39.3rem;
+    margin-top: -39rem;
     display: flex;
     flex-direction: row;
     padding: 8rem 7rem;
@@ -191,9 +191,10 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .hero__headings {
+    margin: 0 auto;
+    padding-top: 4rem;
     flex-direction: column;
     width: 50%;
-    margin: auto 0;
   }
 }
 .hero__subtitle {
@@ -211,6 +212,7 @@ p {
 @media screen and (min-width: 1280px) {
   .hero__subtitle {
     width: 100%;
+    padding-bottom: 0.5rem;
   }
 }
 .hero__title {
@@ -250,7 +252,7 @@ p {
   .hero__music {
     max-width: 40%;
     margin-left: 6rem;
-    margin-top: 9rem;
+    margin-top: 6rem;
   }
 }
 
@@ -260,28 +262,28 @@ p {
 }
 @media screen and (min-width: 767px) {
   .shows__headings {
-    max-width: 725px;
     margin: 0 auto;
+    max-width: 725px;
   }
 }
 @media screen and (min-width: 1280px) {
   .shows__headings {
+    margin: 0 auto;
     display: flex;
     max-width: 1060px;
-    margin: 0 auto;
   }
 }
 .shows__title {
+  margin: 0 auto;
   color: #000000;
   padding: 0.75rem 0 0.25rem 0;
   font-size: 2.5rem;
   max-width: 350px;
-  margin: 0 auto;
 }
 @media screen and (min-width: 767px) {
   .shows__title {
-    max-width: 700px;
     margin: 0 auto;
+    max-width: 700px;
     font-size: 2.25rem;
     padding: 2rem 0 1rem 0rem;
   }
@@ -333,22 +335,22 @@ p {
   }
 }
 .shows__list {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 274px;
-  margin: 0 auto;
 }
 @media screen and (min-width: 767px) {
   .shows__list {
-    max-width: 700px;
     margin: 0 auto;
+    max-width: 700px;
   }
 }
 @media screen and (min-width: 1280px) {
   .shows__list {
-    max-width: 1010px;
     margin: 0 auto;
+    max-width: 1010px;
     padding-left: 18%;
   }
 }

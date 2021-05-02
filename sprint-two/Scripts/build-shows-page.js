@@ -31,11 +31,15 @@ const shows = [
   },
 ];
 
+// //this makes the footer go crazy
+// const heroEl = document.querySelector(".hero");
+// const showsEl = createElementWithClass("section", "shows");
+// heroEl.appendChild(showsEl);
 
 //---------
-const mainEl = document.querySelector("main");
+const showsSectionEl = document.querySelector(".shows__section");
 const showsEl = createElementWithClass("section", "shows");
-mainEl.appendChild(showsEl);
+showsSectionEl.appendChild(showsEl);
 
 //show titles div-- for styling
 const showsHeadings = createElementWithClass("div", "shows__headings");
