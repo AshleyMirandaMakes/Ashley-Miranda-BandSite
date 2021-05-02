@@ -138,11 +138,36 @@
       max-width: 700px;
       margin: 0 auto;
       font-size: 2.25rem;
+      padding: 2rem 0 1rem 0rem;
     }
     @include desktop {
       padding-top: 2rem;
         max-width: 1010px;
         margin: 0 auto;
+    }
+  }
+  &__subtitle-list {
+    @include list-reset;
+    display: flex;
+    visibility: hidden;
+    font-size: 0rem;
+    padding: 0;
+    height: 0;
+    width: 100%;
+      @include tablet {
+        //@include font-demi;
+        color: $color-primary-silver;
+        visibility: visible;
+        font-size: .725rem;
+        padding: 1.5rem 0rem .75rem 0rem;
+        margin-left: 1.25rem;
+        height: auto;
+        width: 75%;
+      }
+    &--element {
+      @include tablet{
+        width: 32.2%;
+      }
     }
   }
   &__list {
@@ -157,7 +182,7 @@
       max-width: 1010px;
       margin: 0 auto;
       padding-left: 20%;
-  }
+    }
   }
 }
 
@@ -165,14 +190,14 @@
   @include font-regular;
   width: 100%;
   color: $color-primary-black;
-  border-bottom: 1px solid $color-primary-silver;;
+  border-bottom: 1px solid $color-primary-silver;
   padding-top: 1.25rem;
   padding-bottom: 1.5rem;
   @include tablet{
+    border-bottom: 1px solid $color-secondary-mercury;
     display: flex;
-    padding: 0;
+    padding: 0.35rem;
     padding-left: .25rem;
-    //remove that padding
     justify-content: space-between;
    }
    @include desktop {
@@ -201,10 +226,13 @@
      }
   }
   &__venue{
+    color: $color-primary-black;
     font-size: .75rem;
     padding: 0;
     padding-bottom: .25rem;
     @include tablet{
+      @include font-regular;
+      color: $color-secondary-dark-black;
       display: flex;
       align-items: center;
       width: 25%;
@@ -216,6 +244,8 @@
     padding: 0;
     padding-bottom: 1rem;
     @include tablet{
+      @include font-regular;
+      color: $color-secondary-dark-black;
       display: flex;
       align-items: center;
       padding-bottom: 0rem;
