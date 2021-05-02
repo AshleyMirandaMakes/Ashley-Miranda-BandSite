@@ -33,7 +33,6 @@ const shows = [
 
 
 //---------
-//item id selection to link to html -- global
 const mainEl = document.querySelector("main");
 const showsEl = createElementWithClass("section", "shows");
 mainEl.appendChild(showsEl);
@@ -52,7 +51,6 @@ const showsSubtitleListEl = createElementWithClass("ul", "shows__subtitle-list")
 showsHeadings.appendChild(showsSubtitleListEl);
 
 const subtitles = ["DATES", "VENUE", "LOCATION"];
-console.log(subtitles);
 
 function createSubtitleEl(subtitle) {
   const showsSubtitleEl = createElementWithClass("li", "shows__subtitle-list--element");
@@ -71,7 +69,7 @@ function displaySubtitleEl() {
 displaySubtitleEl();
 
 //---------
-// show cards
+// show cards - longest function even
 const showsListEl = createElementWithClass("article", "shows__list");
 showsEl.appendChild(showsListEl);
 
@@ -104,11 +102,12 @@ function createShowCards(show) {
   cardEl.appendChild(cardLocation);
 
   const cardButton = createElementWithClass("a", "showCard__button");
-  //for (let i = 0; i > comments.length; i++)
-  
   cardButton.href = "#";
   cardButton.innerText = "BUY TICKETS";
-  cardButton.classList.add("showCard__button");
+  cardButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+    console.log('Button clicked event: ', show.venue);
+  })
   cardEl.appendChild(cardButton);
 
   return cardEl;
@@ -123,14 +122,6 @@ function displayShows() {
 }
 
 displayShows();
-
-//---------
-//show button with console stuff
-const button = document.querySelector('.showCard__button');
-button.addEventListener("click", (event) => {
-  console.log(`Button clicked at ${event.clientX}, ${event.clientY}`);
-  console.log(event);
-});
 
 //---------
 // element with class creator

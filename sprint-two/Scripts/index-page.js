@@ -89,12 +89,21 @@ const formEl = document.querySelector("#comment-form");
 function handleFormSubmission(event) {
   event.preventDefault();
 
-  //add an if statement about inputs being empty
-
-    const commentData = {
-      name: event.target.fullName.value,
-      comment: event.target.fullComment.value
-    };
+  // these don't work?
+  // //add an if statement about inputs being empty
+  // if (event.target.fullName === "" || null) {
+  //   alert('Please fill out your name.');
+  //   return false;
+  // }
+  // if (event.target.fullComment === false) {
+  // alert('Please fill out your name.');
+  // return;
+  // }
+   
+  const commentData = {
+    name: event.target.fullName.value,
+    comment: event.target.fullComment.value
+  };
     
   comments.unshift(commentData);
   displayComment();
