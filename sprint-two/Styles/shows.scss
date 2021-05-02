@@ -13,11 +13,11 @@
     min-height: 300px;
     max-height: 485px;
   }
-  // @include desktop{
-  //   width: 100%;
-  //   height: auto;
-  //   max-height: 625px;
-  // }
+  @include desktop{
+    width: 100%;
+    min-height: 625px;
+    max-height: 625px;
+  }
   &__container{
     width: 100%;
     min-height: 280px;
@@ -25,13 +25,12 @@
       width: 100%;
       min-height: 300px;
       max-height: 485px;
-    //  max-height: auto;
     }
-    // @include desktop{
-    //   height: auto;
-    //   height: 625px;
-    //   max-height: 625px;
-    // }
+    @include desktop {  
+      width: 100%;
+      min-height: 625px;
+      max-height: 625px;
+      }
   }
   &__image {
     background-position: 50% 20%;
@@ -41,12 +40,13 @@
       width: 100%;
       min-height: 300px;
       max-height: 485px;
-     // max-height: auto;
     }
-    // @include desktop{
-    //   height: auto;
-    //   max-height: 625px;
-    // }
+      @include desktop {
+        width: 100%;
+        min-height: 625px;
+        height: auto;
+        //background-position: 50% 80%;
+      }
   }
   &__content {
     position: relative;
@@ -57,10 +57,6 @@
     background: rgba(0, 0, 0, 0.3); 
     width: 100%;
     height: 280px;
-    // height: 100%;
-    // height: auto;
-    // height: 200px; 
-    // padding: 1rem;
     @include tablet {
       width: 100%;
       min-height: 485px;
@@ -68,13 +64,22 @@
       margin-top: -30.3rem;
       padding: 3.25rem 2.5rem;
     }
-    // @include desktop{
-    //   height: 625px;
-    //   max-height: 625px;
-    //   margin-top: -39.1rem;
-    //   // margin: 0 auto; ughhh this just messes it up
-    //   padding-left: 6rem;
-    // }
+    @include desktop{
+      width: 100%;
+      min-height: 625px;
+      max-height: 625px;
+      margin-top: -39.3rem;
+      display: flex;
+      flex-direction: row;
+      padding: 8rem 7rem;
+    }
+  }
+  &__headings {
+    @include desktop {
+      flex-direction: column;
+      width: 50%;
+      margin: auto 0;
+    }
   }
   &__subtitle {
     @include font-regular;
@@ -83,6 +88,9 @@
     padding-left: .25rem;
     @include tablet {
       padding-left: 0;
+    }
+    @include desktop {
+      width: 100%;
     }
   }
   &__title {
@@ -98,22 +106,24 @@
       margin-top: 0;
       width: 75%;
     }
-    // @include desktop {
-    //   width: 600px;
-    //   max-width: 1200px;
-    // }
+    @include desktop {
+      width: 90%;
+    }
   }
   &__music {
     position: relative;
     max-width: 100%;
     max-height: 45%;
     @include tablet {
-        width: 60%;
-        max-height: 37%;
-        margin-top: 2rem;
-        @include desktop {
-        }
+      width: 60%;
+      max-height: 37%;
+      margin-top: 2rem; 
     }
+    @include desktop {
+      max-width: 40%;
+      margin-left: 6rem;
+      margin-top: 9rem; 
+    } 
 }
 }
 
@@ -129,6 +139,11 @@
       margin: 0 auto;
       font-size: 2.25rem;
     }
+    @include desktop {
+      padding-top: 2rem;
+        max-width: 1010px;
+        margin: 0 auto;
+    }
   }
   &__list {
     display: flex;
@@ -138,6 +153,11 @@
       max-width: 700px;
       margin: 0 auto;
     }
+    @include desktop {
+      max-width: 1010px;
+      margin: 0 auto;
+      padding-left: 20%;
+  }
   }
 }
 
@@ -145,7 +165,7 @@
   @include font-regular;
   width: 100%;
   color: $color-primary-black;
-  border-bottom: 1px solid $color-secondary-mercury;
+  border-bottom: 1px solid $color-primary-silver;;
   padding-top: 1.25rem;
   padding-bottom: 1.5rem;
   @include tablet{
@@ -154,6 +174,9 @@
     padding-left: .25rem;
     //remove that padding
     justify-content: space-between;
+   }
+   @include desktop {
+    padding: .5rem 0;
    }
   &__title {
    color: $color-primary-silver; 
