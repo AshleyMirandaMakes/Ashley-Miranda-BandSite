@@ -109,6 +109,7 @@ function createShowCards(show) {
   cardButton.href = "#";
   cardButton.innerText = "BUY TICKETS";
   cardButton.addEventListener('click', (event) => {
+    event.preventDefault();
     event.stopPropagation();
     console.log('Venue clicked:', show.venue);
   })

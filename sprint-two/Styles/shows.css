@@ -360,7 +360,7 @@ p {
   font-weight: 400;
   width: 100%;
   color: #323232;
-  border-bottom: 1px solid #AFAFAF;
+  border-bottom: 1px solid #E1E1E1;
   padding-top: 1.25rem;
   padding-bottom: 1.5rem;
 }
@@ -375,8 +375,8 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .showCard {
-    border-bottom: 1px solid #AFAFAF;
-    padding: 0;
+    border-bottom: 1px solid #E1E1E1;
+    padding: 0.5 0;
   }
 }
 .showCard__title {

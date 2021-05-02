@@ -221,7 +221,7 @@
   @include font-regular;
   width: 100%;
   color: $color-primary-black;
-  border-bottom: 1px solid $color-primary-silver;
+  border-bottom: 1px solid $color-secondary-mercury;
   padding-top: 1.25rem;
   padding-bottom: 1.5rem;
   @include tablet{
@@ -232,8 +232,8 @@
     justify-content: space-between;
    }
    @include desktop {
-    border-bottom: 1px solid $color-primary-silver;
-    padding:0;
+    border-bottom: 1px solid $color-secondary-mercury;
+    padding: 0.5 0;
    }
   &__title {
    color: $color-primary-silver; 
