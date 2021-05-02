@@ -32,7 +32,7 @@ const shows = [
 ];
 
 
-
+//---------
 //item id selection to link to html -- global
 const mainEl = document.querySelector("main");
 const showsEl = createElementWithClass("section", "shows");
@@ -42,30 +42,35 @@ const showsTitleEl = createElementWithClass("h2", "shows__title");
 showsTitleEl.innerText = "Shows";
 showsEl.appendChild(showsTitleEl);
 
-//show subtitles - for tablet and desktop 
+//---------
+//show subtitles - for tablet and desktop only
 const showsSubtitleListEl = createElementWithClass("ul", "shows__subtitle-list");
 showsEl.appendChild(showsSubtitleListEl);
 
-//HMMMMMMM
-// function createSubtitlesAndAppend() { 
-//   const subtitles = ["DATES", "VENUE", "LOCATION"];
-//   console.log(subtitles)
-//   for (let i = 0; i > subtitles.length; i++) {
-//     const showsSubtitleEl = createElementWithClass("li", "shows__subtitle-list--element");
-//     showsSubtitleEl.innerText = subtitles[i];
-//     showsSubtitleListEl.appendChild(showsSubtitleEl);
-//     console.log(showsSubtitleEl);
-//     return showsSubtitleEl;
-//   }
-// }
-// createSubtitlesAndAppend();
+const subtitles = ["DATES", "VENUE", "LOCATION"];
+console.log(subtitles);
 
+function createSubtitleEl(subtitle) {
+  const showsSubtitleEl = createElementWithClass("li", "shows__subtitle-list--element");
+      showsSubtitleEl.innerText = subtitle;
+      showsSubtitleListEl.appendChild(showsSubtitleEl);
+      return showsSubtitleEl;
+}
+
+function displaySubtitleEl() {
+  for (let i = 0; i < subtitles.length; i++) {
+    let showsSubtitleEl  = createSubtitleEl(subtitles[i]);
+    showsSubtitleListEl.appendChild(showsSubtitleEl);
+  };
+}
+
+displaySubtitleEl();
+
+//---------
+// show cards
 const showsListEl = createElementWithClass("article", "shows__list");
 showsEl.appendChild(showsListEl);
 
-
-
-//show card  creator
 function createShowCards(show) {
   const cardEl = createElementWithClass("article", "showCard");
   showsListEl.appendChild(cardEl);
@@ -105,8 +110,6 @@ function createShowCards(show) {
   return cardEl;
   };
 
-
-
 function displayShows() {
   
   for (let i = 0; i < shows.length; i++) {
@@ -117,13 +120,16 @@ function displayShows() {
 
 displayShows();
 
+//---------
+//show button with console stuff
 const button = document.querySelector('.showCard__button');
 button.addEventListener("click", (event) => {
   console.log(`Button clicked at ${event.clientX}, ${event.clientY}`);
   console.log(event);
 });
 
-
+//---------
+// element with class creator
 function createElementWithClass (element, className) {
   const el = document.createElement(element);
   el.classList.add(className);
