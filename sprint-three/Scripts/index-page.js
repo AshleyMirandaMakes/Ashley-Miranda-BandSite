@@ -1,20 +1,40 @@
-const comments = [
-  {
-    name: "Connor Walton",
-    timestamp: 02/17/2021,
-    comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-  },
-  {
-    name: "Emilie Beach",
-    timestamp: 01/09/2021,
-    comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
-  },
-  {
-    name: "Miles Acosta",
-    timestamp: 12/20/2020,
-    comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
-  }
-]
+// const comments = [
+//   {
+//     name: "Connor Walton",
+//     timestamp: "02/17/2021",
+//     comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
+//   },
+//   {
+//     name: "Emilie Beach",
+//     timestamp: "01/09/2021",
+//     comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
+//   },
+//   {
+//     name: "Miles Acosta",
+//     timestamp: "12/20/2020",
+//     comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
+//   }
+// ]
+
+const API_URL = "https://project-1-api.herokuapp.com";
+const API_KEY = "?api_key=c17796ea-16ad-4563-bc21-20cce98c75b3";
+const GET_COMMENTS = "/comments"
+//url + get comments + key for comment api
+
+console.log(API_URL + GET_COMMENTS + API_KEY);
+
+const arrayOfComments = [];
+
+axios
+    .get(API_URL + GET_COMMENTS + API_KEY)
+    .then(response => {
+       
+        console.log(response.data);
+    })
+    .catch(error => {
+        console.log(error);
+    });
+
 
 
 
@@ -46,7 +66,8 @@ function createCommentCards(comment) {
   cardContentTop.appendChild(cardName);
 
   const cardTimestamp = createElementWithClass("h4", "comment__timestamp");
-  let timeStamp = new Date().toLocaleDateString("en-US");
+  let timeStamp = new Date(comment.timestamp).toLocaleDateString("en-US");
+  //that kinda works
   cardTimestamp.innerText = timeStamp;
   cardContentTop.appendChild(cardTimestamp);
 
