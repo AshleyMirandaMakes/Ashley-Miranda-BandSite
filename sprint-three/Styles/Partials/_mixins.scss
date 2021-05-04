@@ -1,0 +1,52 @@
+@use './variables' as *;
+@use './fonts' as *;
+
+//general
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin list-reset {
+  list-style-type: none;
+}
+
+@mixin link-reset {
+  text-decoration: none;
+  color: $color-primary-white;
+}
+
+@mixin margin-auto {
+  margin: 0 auto;
+}
+
+//fonts 
+
+@mixin font-regular {
+  font-family: 'AvenirNext LT Pro';
+  font-weight: 400;
+}
+
+@mixin font-demi {
+  font-family: 'AvenirNext LT Pro';
+  font-weight: 600;
+}
+
+@mixin font-bold {
+  font-family: 'AvenirNext LT Pro';
+  font-weight: 700;
+}
+
+//breakpoints
+@mixin tablet {
+  @media screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
