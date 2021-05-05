@@ -1,15 +1,19 @@
 //API variables
 const API_URL = "https://project-1-api.herokuapp.com";
 const API_KEY = "?api_key=c17796ea-16ad-4563-bc21-20cce98c75b3";
-const GET_COMMENTS = "/comments"
+const COMMENTS = "/comments"
+
 
 //---------
 //other important variables
 const commentListEl = document.querySelector("#comment-list")
+const formEl = document.querySelector("#comment-form");
+const comments = [];
+console.log(comments);
 
 //---------
 axios
-  .get(API_URL + GET_COMMENTS + API_KEY)
+  .get(API_URL + COMMENTS + API_KEY)
   .then(response => {
     const comments = response.data;
     console.log(comments);
@@ -35,48 +39,52 @@ axios
     });
 
 
-
-
-
-//comment form
-const formEl = document.querySelector("#comment-form");
-
-function handleFormSubmission(event) {
-  event.preventDefault();
-   
-  const commentData = {
-    name: event.target.fullName.value,
-    comment: event.target.fullComment.value
-  };
-    
-  comments.unshift(commentData);
-
-  if (requiredInput === "true") {
-    displayComment();
-  }
-  resetForm(event);
-};
-
 //---------
-//form validation
-function requiredInput() {
-  event.preventDefault();
-  //ask why these are crossed out
-  const formNameInput = event.target.fullName.value;
-  const formCommentInput = event.target.fullComment.value;
 
-  if (formNameInput || formCommentInput === "")
-  {
-  alert("Please input your comment");
-  return false;
-  }
+formEl.addEventListener('submit', (event) => {
+  event.preventDefault();
+   // grab the data fom the form
+   let formName = event.target.fullName.value;
+   let formComment = event.target.fullComment.value;
+
+   if (formName === "" && formComment === "") {
+       window.alert("Error 400 - Please enter a name and comment");
+       return;
+   };
+
+   axios
+   .get(API_URL + COMMENTS + API_KEY, {
+     
+           "name": formName,
+           "comment": formComment
+       }).then(response => {
+         console.log(response)
+         const comments = response.data
+       //createCommentsCards(response);
+       function displayComment() {
+        //clear the comments list-- no duplicates
+        commentListEl.innerHTML = "";
+   
+        comments.forEach(comment => {
+          createCommentCards(comment);
+        })
+       }
+       displayComment();
+
+       }).catch(error => {
+           console.log(error);
+       })
+       //resets the form     
+   formEl.reset();
 }
+) 
+
 
 function resetForm() {
   document.getElementById("comment-form").reset();
 }
 
-formEl.addEventListener('submit', handleFormSubmission);
+// formEl.addEventListener('submit', handleFormSubmission);
 formEl.addEventListener('submit', resetForm)
 
 
