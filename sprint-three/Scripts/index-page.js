@@ -23,28 +23,24 @@ const GET_COMMENTS = "/comments"
 
 console.log(API_URL + GET_COMMENTS + API_KEY);
 
+//item id selection to link to html -- global
+const commentListEl = document.querySelector("#comment-list")
+
+//somewhere to push our comments into
 const arrayOfComments = [];
 
 axios
-    .get(API_URL + GET_COMMENTS + API_KEY)
-    .then(response => {
-       
-        console.log(response.data);
+  .get(API_URL + GET_COMMENTS + API_KEY)
+  .then(response => {
+     console.log(response.data);
+     arrayOfComments.push(response.data);
+     console.log(arrayOfComments);
     })
-    .catch(error => {
-        console.log(error);
+  .catch(error => {
+        console.log("Unable to retrieve comment data");
+        //TODO - maybe retry API after a timeout
     });
 
-
-
-
-//function to help create some elements & add classes
-function createElementWithClass (element, className) {
-  const el = document.createElement(element);
-  el.classList.add(className);
-
-  return el;
-}
 
 //this function creates comment cards
 function createCommentCards(comment) {
@@ -77,67 +73,72 @@ function createCommentCards(comment) {
   const cardComment = createElementWithClass("p", "comment__comment");
   cardComment.innerText = comment.comment;
   cardContentBottom.appendChild(cardComment);
-  
-  return cardEl;
+      
+
+   commentListEl.appendChild(cardEl);
   };
 
-//item id selection to link to html -- global
-const commentListEl = document.querySelector("#comment-list")
 
-
-//function to render comment to the page 
-function displayComment() {
-  //clear the comments list-- no duplicates
-  commentListEl.innerHTML = "";
+// //function to render comment to the page 
+// function displayComment() {
+//   //clear the comments list-- no duplicates
+//   commentListEl.innerHTML = "";
   
-  //render all comments
-  for (let i = 0; i < comments.length; i++) {
-    let cardEl = createCommentCards(comments[i]);
-    commentListEl.appendChild(cardEl);
-  };
-}
-displayComment();
+//   //render all comments
+//   for (let i = 0; i < comments.length; i++) {
+//     let cardEl = createCommentCards(comments[i]);
+//     commentListEl.appendChild(cardEl);
+//   };
+// }
+// displayComment();
 
-//comment form
-const formEl = document.querySelector("#comment-form");
+// //comment form
+// const formEl = document.querySelector("#comment-form");
 
-function handleFormSubmission(event) {
-  event.preventDefault();
+// function handleFormSubmission(event) {
+//   event.preventDefault();
    
-  const commentData = {
-    name: event.target.fullName.value,
-    comment: event.target.fullComment.value
-  };
+//   const commentData = {
+//     name: event.target.fullName.value,
+//     comment: event.target.fullComment.value
+//   };
     
-  comments.unshift(commentData);
+//   comments.unshift(commentData);
 
-  if (requiredInput === "true") {
-    displayComment();
-  }
-  resetForm(event);
-};
+//   if (requiredInput === "true") {
+//     displayComment();
+//   }
+//   resetForm(event);
+// };
 
-//form validation function
-function requiredInput() {
-  event.preventDefault();
-  //ask why these are crossed out
-  const formNameInput = event.target.fullName.value;
-  const formCommentInput = event.target.fullComment.value;
+// //form validation function
+// function requiredInput() {
+//   event.preventDefault();
+//   //ask why these are crossed out
+//   const formNameInput = event.target.fullName.value;
+//   const formCommentInput = event.target.fullComment.value;
 
-  if (formNameInput || formCommentInput === "")
-  {
-  alert("Please input your comment");
-  return false;
-  }
-}
+//   if (formNameInput || formCommentInput === "")
+//   {
+//   alert("Please input your comment");
+//   return false;
+//   }
+// }
 
-function resetForm() {
-  document.getElementById("comment-form").reset();
-}
+// function resetForm() {
+//   document.getElementById("comment-form").reset();
+// }
 
-formEl.addEventListener('submit', handleFormSubmission);
-formEl.addEventListener('submit', resetForm)
+// formEl.addEventListener('submit', handleFormSubmission);
+// formEl.addEventListener('submit', resetForm)
 
 
 
+// //function to help create some elements & add classes
+// function createElementWithClass (element, className) {
+//   const el = document.createElement(element);
+//   el.classList.add(className);
+
+//   return el;
+// }
 

@@ -1,35 +1,35 @@
-const shows = [
-  {
-    date: "Mon Sept 06 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA"
-  },
-  {
-    date: "Tue Sept 21 2021",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA"
-  },
-  {
-    date: "Fri Oct 15 2021",
-    venue: "View Lounge",
-    location: "San Francisco, CA"
-  },
-  {
-    date: "Sat Nov 06 2021",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA"
-  },
-  {
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center",
-    location: "San Francisco, CA"
-  },
-  {
-    date: "Wed Dec 15 2021",
-    venue: "Press Club",
-    location: "San Francisco, CA"
-  },
-];
+// const shows = [
+//   {
+//     date: "Mon Sept 06 2021",
+//     venue: "Ronald Lane",
+//     location: "San Francisco, CA"
+//   },
+//   {
+//     date: "Tue Sept 21 2021",
+//     venue: "Pier 3 East",
+//     location: "San Francisco, CA"
+//   },
+//   {
+//     date: "Fri Oct 15 2021",
+//     venue: "View Lounge",
+//     location: "San Francisco, CA"
+//   },
+//   {
+//     date: "Sat Nov 06 2021",
+//     venue: "Hyatt Agency",
+//     location: "San Francisco, CA"
+//   },
+//   {
+//     date: "Fri Nov 26 2021",
+//     venue: "Moscow Center",
+//     location: "San Francisco, CA"
+//   },
+//   {
+//     date: "Wed Dec 15 2021",
+//     venue: "Press Club",
+//     location: "San Francisco, CA"
+//   },
+// ];
 
 // //this makes the footer go crazy
 // const heroEl = document.querySelector(".hero");
@@ -37,6 +37,7 @@ const shows = [
 // heroEl.appendChild(showsEl);
 
 //---------
+
 const showsSectionEl = document.querySelector(".shows__section");
 const showsEl = createElementWithClass("section", "shows");
 showsSectionEl.appendChild(showsEl);
@@ -72,11 +73,39 @@ function displaySubtitleEl() {
 
 displaySubtitleEl();
 
-//---------
-// show cards - longest function ever
 const showsListEl = createElementWithClass("article", "shows__list");
 showsEl.appendChild(showsListEl);
+//this up here ^^ is all creation of the shows stuff and the list to place the showdates in
 
+
+
+//--------- API STUFF
+const API_URL = "https://project-1-api.herokuapp.com";
+const API_KEY = "?api_key=c17796ea-16ad-4563-bc21-20cce98c75b3";
+const GET_SHOWDATES = "/showdates"
+
+
+axios
+  .get(API_URL + GET_SHOWDATES + API_KEY)
+  .then(response => {
+     let showdates = response.data
+     //console.log(showdates);
+
+     function displayShows() {
+       showdates.forEach(date => {
+         createShowCards(date);
+       })
+     }
+     displayShows();
+    })   
+  .catch(error => {
+        console.log("Unable to retrieve comment data");
+        //TODO - maybe retry API after a timeout
+    });
+
+
+//---------
+// show cards - longest function ever
 function createShowCards(show) {
   const cardEl = createElementWithClass("article", "showCard");
   showsListEl.appendChild(cardEl);
@@ -86,15 +115,26 @@ function createShowCards(show) {
   cardEl.appendChild(cardTitleOne);
   
   const cardDate = createElementWithClass("h3", "showCard__date");
+  //TODO --- FIGURE OUT TIME STAMP STUFF
+  // let timeStamp = new Date(show.date).toLocaleDateString("en-US");
+  // cardDate.innerText = timeStamp;
+  // doesn't work
   cardDate.innerText = show.date;
   cardEl.appendChild(cardDate);
+
+  // other timestamp stuff
+  // const cardTimestamp = createElementWithClass("h4", "comment__timestamp");
+  // let timeStamp = new Date(comment.timestamp).toLocaleDateString("en-US");
+  // //that kinda works
+  // cardTimestamp.innerText = timeStamp;
+  // cardContentTop.appendChild(cardTimestamp);
 
   const cardTitleTwo = createElementWithClass("h3", "showCard__title");
   cardTitleTwo.innerText = "VENUE";
   cardEl.appendChild(cardTitleTwo);
   
   const cardVenue = createElementWithClass("h3", "showCard__venue");
-  cardVenue.innerText = show.venue;
+  cardVenue.innerText = show.place;
   cardEl.appendChild(cardVenue);
 
   const cardTitleThree = createElementWithClass("h3", "showCard__title");
@@ -111,7 +151,7 @@ function createShowCards(show) {
   cardButton.addEventListener('click', (event) => {
     event.preventDefault();
     event.stopPropagation();
-    console.log('Venue clicked:', show.venue);
+    console.log('Venue clicked:', show.place);
   })
   cardEl.appendChild(cardButton);
 
