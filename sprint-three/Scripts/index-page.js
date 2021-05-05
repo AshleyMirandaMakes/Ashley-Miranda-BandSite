@@ -1,46 +1,93 @@
-// const comments = [
-//   {
-//     name: "Connor Walton",
-//     timestamp: "02/17/2021",
-//     comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-//   },
-//   {
-//     name: "Emilie Beach",
-//     timestamp: "01/09/2021",
-//     comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
-//   },
-//   {
-//     name: "Miles Acosta",
-//     timestamp: "12/20/2020",
-//     comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
-//   }
-// ]
-
+//API variables
 const API_URL = "https://project-1-api.herokuapp.com";
 const API_KEY = "?api_key=c17796ea-16ad-4563-bc21-20cce98c75b3";
 const GET_COMMENTS = "/comments"
-//url + get comments + key for comment api
 
-console.log(API_URL + GET_COMMENTS + API_KEY);
-
-//item id selection to link to html -- global
+//---------
+//other important variables
 const commentListEl = document.querySelector("#comment-list")
 
-//somewhere to push our comments into
-const arrayOfComments = [];
-
+//---------
 axios
   .get(API_URL + GET_COMMENTS + API_KEY)
   .then(response => {
-     console.log(response.data);
-     arrayOfComments.push(response.data);
-     console.log(arrayOfComments);
+    const comments = response.data;
+    console.log(comments);
+
+    comments.sort((a, b) => {
+      return new Date(b.timestamp) - new Date(a.timestamp);
+    });
+
+    function displayComment() {
+     //clear the comments list-- no duplicates
+     commentListEl.innerHTML = "";
+
+     comments.forEach(comment => {
+       createCommentCards(comment);
+     })
+    }
+    displayComment();
+
     })
   .catch(error => {
-        console.log("Unable to retrieve comment data");
+        console.log(`${error} Unable to retrieve comment data`);
         //TODO - maybe retry API after a timeout
     });
 
+
+
+
+
+//comment form
+const formEl = document.querySelector("#comment-form");
+
+function handleFormSubmission(event) {
+  event.preventDefault();
+   
+  const commentData = {
+    name: event.target.fullName.value,
+    comment: event.target.fullComment.value
+  };
+    
+  comments.unshift(commentData);
+
+  if (requiredInput === "true") {
+    displayComment();
+  }
+  resetForm(event);
+};
+
+//---------
+//form validation
+function requiredInput() {
+  event.preventDefault();
+  //ask why these are crossed out
+  const formNameInput = event.target.fullName.value;
+  const formCommentInput = event.target.fullComment.value;
+
+  if (formNameInput || formCommentInput === "")
+  {
+  alert("Please input your comment");
+  return false;
+  }
+}
+
+function resetForm() {
+  document.getElementById("comment-form").reset();
+}
+
+formEl.addEventListener('submit', handleFormSubmission);
+formEl.addEventListener('submit', resetForm)
+
+
+//---------
+//function to help create some elements & add classes
+function createElementWithClass (element, className) {
+  const el = document.createElement(element);
+  el.classList.add(className);
+
+  return el;
+}
 
 //this function creates comment cards
 function createCommentCards(comment) {
@@ -74,71 +121,5 @@ function createCommentCards(comment) {
   cardComment.innerText = comment.comment;
   cardContentBottom.appendChild(cardComment);
       
-
    commentListEl.appendChild(cardEl);
   };
-
-
-// //function to render comment to the page 
-// function displayComment() {
-//   //clear the comments list-- no duplicates
-//   commentListEl.innerHTML = "";
-  
-//   //render all comments
-//   for (let i = 0; i < comments.length; i++) {
-//     let cardEl = createCommentCards(comments[i]);
-//     commentListEl.appendChild(cardEl);
-//   };
-// }
-// displayComment();
-
-// //comment form
-// const formEl = document.querySelector("#comment-form");
-
-// function handleFormSubmission(event) {
-//   event.preventDefault();
-   
-//   const commentData = {
-//     name: event.target.fullName.value,
-//     comment: event.target.fullComment.value
-//   };
-    
-//   comments.unshift(commentData);
-
-//   if (requiredInput === "true") {
-//     displayComment();
-//   }
-//   resetForm(event);
-// };
-
-// //form validation function
-// function requiredInput() {
-//   event.preventDefault();
-//   //ask why these are crossed out
-//   const formNameInput = event.target.fullName.value;
-//   const formCommentInput = event.target.fullComment.value;
-
-//   if (formNameInput || formCommentInput === "")
-//   {
-//   alert("Please input your comment");
-//   return false;
-//   }
-// }
-
-// function resetForm() {
-//   document.getElementById("comment-form").reset();
-// }
-
-// formEl.addEventListener('submit', handleFormSubmission);
-// formEl.addEventListener('submit', resetForm)
-
-
-
-// //function to help create some elements & add classes
-// function createElementWithClass (element, className) {
-//   const el = document.createElement(element);
-//   el.classList.add(className);
-
-//   return el;
-// }
-
