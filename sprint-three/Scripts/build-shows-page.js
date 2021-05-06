@@ -42,8 +42,6 @@ displaySubtitleEl();
 
 const showsListEl = createElementWithClass("article", "shows__list");
 showsEl.appendChild(showsListEl);
-//this up here ^^ is all creation of the shows stuff and the list to place the showdates in
-
 
 
 //--------- API STUFF
@@ -56,7 +54,7 @@ axios
   .get(API_URL + GET_SHOWDATES + API_KEY)
   .then(response => {
      let showdates = response.data
-     //console.log(showdates);
+     console.log(showdates);
 
      function displayShows() {
        showdates.forEach(date => {
@@ -66,7 +64,7 @@ axios
      displayShows();
     })   
   .catch(error => {
-        console.log("Unable to retrieve comment data");
+        console.log(`${error} Unable to retrieve comment data`);
         //TODO - maybe retry API after a timeout
     });
 
@@ -83,18 +81,17 @@ function createShowCards(show) {
   
   const cardDate = createElementWithClass("h3", "showCard__date");
   //TODO --- FIGURE OUT TIME STAMP STUFF
-  // let timeStamp = new Date(show.date).toLocaleDateString("en-US");
-  // cardDate.innerText = timeStamp;
-  // doesn't work
-  cardDate.innerText = show.date;
+  let timeStamp = Date(show.date);
+  // function getDate(timeStamp) {
+  //    let month = timeStamp.getMonth();
+  //    let year = timeStamp.getFullYear(); //doesn't work, how to turn into current year?
+  //    let day = timeStamp.getDate();
+  // const humanDateFormat = `${month.toLocaleString()}` + "/" + `${day.toLocaleString()}` + "/" + `${year.toLocaleString()}`;
+  //   return humanDateFormat;
+  // }
+  // timestamp = getDate();
+  cardDate.innerText = timeStamp;
   cardEl.appendChild(cardDate);
-
-  // other timestamp stuff
-  // const cardTimestamp = createElementWithClass("h4", "comment__timestamp");
-  // let timeStamp = new Date(comment.timestamp).toLocaleDateString("en-US");
-  // //that kinda works
-  // cardTimestamp.innerText = timeStamp;
-  // cardContentTop.appendChild(cardTimestamp);
 
   const cardTitleTwo = createElementWithClass("h3", "showCard__title");
   cardTitleTwo.innerText = "VENUE";
@@ -124,16 +121,6 @@ function createShowCards(show) {
 
   return cardEl;
   };
-
-function displayShows() {
-  
-  for (let i = 0; i < shows.length; i++) {
-    let cardEl = createShowCards(shows[i]);
-    showsListEl.appendChild(cardEl);
-  };
-}
-
-displayShows();
 
 //---------
 // element with class creator

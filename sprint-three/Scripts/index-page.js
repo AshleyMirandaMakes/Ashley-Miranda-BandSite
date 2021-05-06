@@ -9,7 +9,6 @@ const COMMENTS = "/comments"
 const commentListEl = document.querySelector("#comment-list")
 const formEl = document.querySelector("#comment-form");
 const comments = [];
-console.log(comments);
 
 //---------
 axios
@@ -48,28 +47,32 @@ formEl.addEventListener('submit', (event) => {
    let formComment = event.target.fullComment.value;
 
    if (formName === "" && formComment === "") {
-       window.alert("Error 400 - Please enter a name and comment");
+       alert("Please enter your name and comment");
        return;
    };
 
    axios
-   .get(API_URL + COMMENTS + API_KEY, {
-     
-           "name": formName,
-           "comment": formComment
-       }).then(response => {
-         console.log(response)
-         const comments = response.data
-       //createCommentsCards(response);
-       function displayComment() {
-        //clear the comments list-- no duplicates
-        commentListEl.innerHTML = "";
-   
-        comments.forEach(comment => {
-          createCommentCards(comment);
-        })
-       }
-       displayComment();
+   .post(API_URL + COMMENTS + API_KEY, {
+     //sends to API
+    "name": formName,
+    "comment": formComment
+
+    })
+    .then(response => {
+      const comments = response.data
+      console.log(comments);
+
+      //TODO - displayComments
+      
+      //  function displayComment() {
+      //     //clear the comments list-- no duplicates
+      //   commentListEl.innerHTML = "";
+    
+      //   comments.forEach(comment => {
+      //   createCommentCards(comment);
+      //     })
+      //  }
+      //  displayComment();
 
        }).catch(error => {
            console.log(error);
@@ -80,12 +83,12 @@ formEl.addEventListener('submit', (event) => {
 ) 
 
 
-function resetForm() {
-  document.getElementById("comment-form").reset();
-}
+// function resetForm() {
+//   document.getElementById("comment-form").reset();
+// }
 
 // formEl.addEventListener('submit', handleFormSubmission);
-formEl.addEventListener('submit', resetForm)
+// formEl.addEventListener('submit', resetForm)
 
 
 //---------
