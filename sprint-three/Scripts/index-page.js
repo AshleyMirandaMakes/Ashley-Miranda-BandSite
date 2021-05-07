@@ -2,6 +2,7 @@
 const API_URL = "https://project-1-api.herokuapp.com";
 const API_KEY = "?api_key=c17796ea-16ad-4563-bc21-20cce98c75b3";
 const COMMENTS = "/comments"
+const DELETE = "/comments/"
 
 //---------
 //other important variables
@@ -74,6 +75,8 @@ formEl.addEventListener('submit', (event) => {
 formEl.reset();
 });
 
+
+
 //---------
 function displayComment(x) {
   createCommentCards(x);
@@ -115,7 +118,32 @@ function createCommentCards(comment) {
   cardButton.addEventListener('click', (event) => {
     event.preventDefault();
     event.stopPropagation();
-    console.log('Comment deleted.');
+    
+    ID = comment.id
+    let deletedComment = ""
+
+    axios
+   .delete(API_URL + DELETE + ID + API_KEY, {
+   })
+   .then(response => {
+     if (ID === response.data.id) {
+      deletedComment = response.data.id;
+      commentsArray.pop(deletedComment);
+     };
+
+    function displayComment() { 
+      commentListEl.innerHTML = "";
+
+      commentsArray.forEach(comment => {
+      createCommentCards(comment);
+        })
+      }
+   displayComment();
+
+  }).catch(error => {
+    console.log(`${error}, unable to delete comment`);
+  })
+  formEl.reset();
   })
   cardContentTop.appendChild(cardButton);
 
