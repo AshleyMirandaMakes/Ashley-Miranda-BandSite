@@ -68,7 +68,7 @@ formEl.addEventListener('submit', (event) => {
     displayComment();
 
   }).catch(error => {
-    console.log(error);
+    console.log(`${error} 400, missing name and comment`);
   })
 
 formEl.reset();
@@ -86,6 +86,8 @@ function createElementWithClass (element, className) {
   el.classList.add(className);
   return el;
 };
+
+
 
 //this function creates comment cards
 function createCommentCards(comment) {

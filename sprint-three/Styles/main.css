@@ -32,6 +32,7 @@ html {
   padding: 0;
   font-family: "AvenirNext LT Pro";
   font-weight: 400;
+  border: 1px solid lavender;
 }
 
 h1 {
@@ -451,6 +452,12 @@ p {
   font-weight: 600;
   color: #323232;
   font-size: 0.8rem;
+}
+.comment__button {
+  text-decoration: none;
+  color: #FFFFFF;
+  color: #323232;
+  font-size: 0.725rem;
 }
 .comment__timestamp {
   color: #AFAFAF;

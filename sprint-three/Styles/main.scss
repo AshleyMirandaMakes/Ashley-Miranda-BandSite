@@ -291,6 +291,11 @@
     color: $color-primary-black;
     font-size: .8rem;
   }
+  &__button {
+    @include link-reset;
+    color: $color-primary-black;
+    font-size: .725rem;
+  }
   &__timestamp {
     color: $color-primary-silver;
   }
