@@ -574,6 +574,7 @@ p {
 }
 .form__input--special {
   height: 5.5rem;
+  resize: none;
 }
 .form__button {
   background-color: #323232;

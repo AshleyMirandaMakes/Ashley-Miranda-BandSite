@@ -36,28 +36,16 @@ axios
 //---------
 formEl.addEventListener('submit', (event) => {
   event.preventDefault();
-   // grab the data fom the form
    let formName = event.target.fullName.value;
    let formComment = event.target.fullComment.value;
    if (formName === "" || formComment === "") {
        alert("Please enter your name and comment");
        return;
    };
-  //  if (formName === "") {
-  //   alert("Please enter your name");
-  //   return; 
-  //   } else if ( formComment === "") {
-  //   alert("Please enter your comment");
-  //   return;
-  //   } else (formName === "" && formComment === "" ) {
-  //   alert("Please enter your name and comment");
-  //   return;
-  //  };
 
 
    axios
    .post(API_URL + COMMENTS + API_KEY, {
-     //sends to API
      name: formName,
      comment: formComment,
    })
@@ -70,7 +58,6 @@ formEl.addEventListener('submit', (event) => {
     });
 
     function displayComment() {
-     //clear the comments list-- no duplicates
      commentListEl.innerHTML = "";
 
      commentsArray.forEach(comment => {
@@ -94,18 +81,14 @@ function displayComment(x) {
   return x;
 };
 
-//function to help create some elements & add classes
 function createElementWithClass (element, className) {
   const el = document.createElement(element);
   el.classList.add(className);
   return el;
 };
 
-
-
-//this function creates comment cards
 function createCommentCards(comment) {
-  //card creation
+  
   const cardEl = createElementWithClass("article", "comment__card");
   commentListEl.appendChild(cardEl);
 
@@ -128,6 +111,7 @@ function createCommentCards(comment) {
   const cardButton = createElementWithClass("a", "comment__button");
   cardButton.href = "#";
   cardButton.innerText = "DELETE";
+
   cardButton.addEventListener('click', (event) => {
     event.preventDefault();
     event.stopPropagation();
@@ -160,9 +144,7 @@ function createCommentCards(comment) {
   cardContentTopRight.appendChild(cardButton);
 
   const cardTimestamp = createElementWithClass("h4", "comment__timestamp");
-  let timeStamp = new Date(comment.timestamp).toLocaleDateString("en-US");
-  console.log(comment.timestamp)
-  //that kinda works
+  let timeStamp = new Date(comment.timestamp).toLocaleDateString("en-US", {month: '2-digit', day: '2-digit', year: 'numeric' });
   cardTimestamp.innerText = timeStamp;
   cardContentTopRight.appendChild(cardTimestamp);
 
@@ -176,5 +158,3 @@ function createCommentCards(comment) {
   commentListEl.appendChild(cardEl);
 };
 
-// formEl.addEventListener('submit', handleFormSubmission);
-// formEl.addEventListener('submit', resetForm) 
