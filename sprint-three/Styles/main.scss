@@ -270,28 +270,40 @@
   &__content {
     padding-left: 1rem;
     width: 100%;
-  }
-  &__content--top {
     display: flex;
-    //justify-content: space-between;
-    justify-content: flex-start;
-    padding-bottom: .5rem;
+    flex-direction: column;
+    &--top {
+      display: flex;
+      flex-direction: row;
+      //justify-content: space-between;
+      justify-content: flex-start;
+      padding-bottom: .5rem;
+      width: 100%;
+    }
+    &--right {
+      display: flex;
+      flex-direction: row;
+      width: 60%;
+      justify-content: flex-end;
+    }
   }
   &__name {
     @include font-demi;
     @include flex-center;
     color: $color-primary-black;
     display: flex;
+    justify-content: flex-start;
     font-size: .8rem;
+    width: 40%;
   }
   &__button {
     @include flex-center;
     @include link-reset;
     color: $color-primary-black;
     font-size: .625rem;
-    padding: .15rem .25rem 0rem .25rem;
-    margin-right: 2rem;
+    padding: .15rem 1.25rem 0rem .25rem;
     @include tablet {
+      font-size: .725rem;
     }
   }
   &__timestamp {

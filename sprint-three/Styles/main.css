@@ -32,7 +32,6 @@ html {
   padding: 0;
   font-family: "AvenirNext LT Pro";
   font-weight: 400;
-  border: 1px solid lavender;
 }
 
 h1 {
@@ -426,11 +425,21 @@ p {
 .comment__content {
   padding-left: 1rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .comment__content--top {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   padding-bottom: 0.5rem;
+  width: 100%;
+}
+.comment__content--right {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  justify-content: flex-end;
 }
 .comment__name {
   font-family: "AvenirNext LT Pro";
@@ -440,7 +449,9 @@ p {
   align-items: center;
   color: #323232;
   display: flex;
+  justify-content: flex-start;
   font-size: 0.8rem;
+  width: 40%;
 }
 .comment__button {
   display: flex;
@@ -450,8 +461,12 @@ p {
   color: #FFFFFF;
   color: #323232;
   font-size: 0.625rem;
-  padding: 0.15rem 0.25rem 0rem 0.25rem;
-  margin-right: 2rem;
+  padding: 0.15rem 1.25rem 0rem 0.25rem;
+}
+@media screen and (min-width: 767px) {
+  .comment__button {
+    font-size: 0.725rem;
+  }
 }
 .comment__timestamp {
   display: flex;

@@ -92,6 +92,7 @@
   &__title {
     @include font-demi;
     width: 85%;
+    max-width: 265px;
     position: relative;
     color: $color-primary-white; 
     padding: .75rem 0rem;
@@ -101,6 +102,7 @@
       margin-top: 0;
       font-size: 3.75rem;
       width: 85%;
+      max-width: 700px;
     }
     @include desktop {
       width: 100%;

@@ -1,9 +1,4 @@
-// //this makes the footer go crazy
-// const heroEl = document.querySelector(".hero");
-// const showsEl = createElementWithClass("section", "shows");
-// heroEl.appendChild(showsEl);
 
-//---------
 
 const showsSectionEl = document.querySelector(".shows__section");
 const showsEl = createElementWithClass("section", "shows");

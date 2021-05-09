@@ -122,6 +122,8 @@ function createCommentCards(comment) {
   cardName.innerText = comment.name;
   cardContentTop.appendChild(cardName);
 
+  const cardContentTopRight = createElementWithClass("div", "comment__content--right");
+  cardContentTop.appendChild(cardContentTopRight);
 
   const cardButton = createElementWithClass("a", "comment__button");
   cardButton.href = "#";
@@ -140,7 +142,6 @@ function createCommentCards(comment) {
      if (ID === response.data.id) {
       deletedComment = response.data.id;
       commentsArray.splice(deletedComment, 1);
-      //this removes first comment 
      };
 
     function displayComment() { 
@@ -156,14 +157,14 @@ function createCommentCards(comment) {
   })
   formEl.reset();
   })
-  cardContentTop.appendChild(cardButton);
+  cardContentTopRight.appendChild(cardButton);
 
   const cardTimestamp = createElementWithClass("h4", "comment__timestamp");
   let timeStamp = new Date(comment.timestamp).toLocaleDateString("en-US");
   console.log(comment.timestamp)
   //that kinda works
   cardTimestamp.innerText = timeStamp;
-  cardContentTop.appendChild(cardTimestamp);
+  cardContentTopRight.appendChild(cardTimestamp);
 
   const cardContentBottom = createElementWithClass("div", "comment__content--bottom");
   cardContent.appendChild(cardContentBottom);
