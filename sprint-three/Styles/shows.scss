@@ -6,74 +6,55 @@
 
 .hero {
   max-width: 100%;
-  min-height: 280px;
-  max-height: 280px;
+  max-height: auto;
     @include tablet {
     width: 100%;
-    min-height: 300px;
-    max-height: 485px;
+    height: 510px;
+    max-height: 518px;
   }
   @include desktop{
     width: 100%;
-    min-height: 625px;
+    height: auto;
     max-height: 625px;
   }
   &__container{
-    background-image: url( '../Assets/Images/shows-bio.jpg');
-    width: 100%;
-    min-height: 280px;
-    max-height: 280px;
-    background: rgba(0, 0, 0, 0.3); 
-    @include tablet {
-      width: 100%;
-      min-height: 300px;
-      max-height: 485px;
-    }
-    @include desktop {  
-      width: 100%;
-      min-height: 625px;
-      max-height: 625px;
-      }
-  }
-  &__image {
-    background-position: 50% 20%;
-    width: 100%;
-    min-height: 280px;
-    max-height: 280px;
-    @include tablet {
-      width: 100%;
-      min-height: 300px;
-      max-height: 485px;
-    }
-      @include desktop {
-        width: 100%;
-        min-height: 625px;
-        height: auto;
-        //background-position: 50% 80%;
-      }
-  }
-  &__content {
     position: relative;
-    padding: 1rem .75rem;
+    width: 100%;
+    height: 265px;
+    max-height: 445px;
+    background-image: url( '../Assets/Images/hero-shows.jpg');
+    background-position: 0% 30%;
+    background-size: cover;
+    @include tablet {
+      width: 100%;
+      height: 510px;
+      max-height: 518px;
+    }
+    @include desktop { 
+      height: auto;
+      height: 625px;
+      max-height: 625px; 
+      }
+    }
+  &__content {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    //margin-top: -17.53rem;
-    background: rgba(0, 0, 0, 0.3); 
+    align-items: left;
+    background: rgba(0, 0, 0, 0.4); 
     width: 100%;
-    min-height: 280px;
-    max-height: 280px;
+    height: auto;
+    height: 265px; 
+    padding: 1rem;
     @include tablet {
-      width: 100%;
-      min-height: 485px;
-      max-height: 485px;
-      margin-top: -30.3rem;
-      padding: 3.25rem 2.5rem;
+      height: 510px;
+      max-height: 518px;
     }
     @include desktop{
       width: 100%;
-      min-height: 625px;
+      height: 625px;
       max-height: 625px;
-      margin-top: -39rem;
+      padding-left: 6rem;
       display: flex;
       flex-direction: row;
       padding: 8rem 7rem;
@@ -81,11 +62,14 @@
   }
   &__headings {
     height: 50%;
+    @include tablet {
+    padding-top: 2rem;
+    }
     @include desktop {
       @include margin-auto;
       padding-top: 4rem;
       flex-direction: column;
-      width: 50%;
+      width: 60%;
     }
   }
   &__subtitle {
@@ -93,28 +77,35 @@
     position: relative;
     color: $color-secondary-alabaster;
     padding-left: .25rem;
+    font-size: .765rem;
     @include tablet {
-      padding-left: 0;
+      padding-left: 1rem;
+      font-size: 1.72rem;
     }
     @include desktop {
-      width: 100%;
+      width: 80%;
+      padding-left: 0;
       padding-bottom: .5rem;
+      font-size: 1.6rem;
     }
   }
   &__title {
-    // @include font-regular;
     @include font-demi;
-    width: 70%;
+    width: 85%;
     position: relative;
     color: $color-primary-white; 
     padding: .75rem 0rem;
+    font-size: 1.45rem;
     @include tablet {
-      padding-left: 0;
+      padding-left: 1rem;
       margin-top: 0;
-      width: 75%;
+      font-size: 3.75rem;
+      width: 85%;
     }
     @include desktop {
-      width: 90%;
+      width: 100%;
+      padding-left: 0;
+      font-size: 3.95rem;
     }
   }
   &__music {
@@ -123,11 +114,13 @@
     max-width: 100%;
     max-height: 150px;
     @include tablet {
+      margin-left: 1rem;
       width: 60%;
       max-height: 37%;
       margin-top: 2rem; 
     }
     @include desktop {
+      margin-top: 3rem;
       max-width: 40%;
       margin-left: 6rem;
       margin-top: 6rem; 

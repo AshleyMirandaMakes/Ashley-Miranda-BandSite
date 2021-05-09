@@ -100,89 +100,68 @@ p {
 
 .hero {
   max-width: 100%;
-  min-height: 280px;
-  max-height: 280px;
+  max-height: auto;
 }
 @media screen and (min-width: 767px) {
   .hero {
     width: 100%;
-    min-height: 300px;
-    max-height: 485px;
+    height: 510px;
+    max-height: 518px;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero {
     width: 100%;
-    min-height: 625px;
+    height: auto;
     max-height: 625px;
   }
 }
 .hero__container {
-  background-image: url("../Assets/Images/shows-bio.jpg");
+  position: relative;
   width: 100%;
-  min-height: 280px;
-  max-height: 280px;
-  background: rgba(0, 0, 0, 0.3);
+  height: 265px;
+  max-height: 445px;
+  background-image: url("../Assets/Images/hero-shows.jpg");
+  background-position: 0% 30%;
+  background-size: cover;
 }
 @media screen and (min-width: 767px) {
   .hero__container {
     width: 100%;
-    min-height: 300px;
-    max-height: 485px;
+    height: 510px;
+    max-height: 518px;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__container {
-    width: 100%;
-    min-height: 625px;
-    max-height: 625px;
-  }
-}
-.hero__image {
-  background-position: 50% 20%;
-  width: 100%;
-  min-height: 280px;
-  max-height: 280px;
-}
-@media screen and (min-width: 767px) {
-  .hero__image {
-    width: 100%;
-    min-height: 300px;
-    max-height: 485px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero__image {
-    width: 100%;
-    min-height: 625px;
     height: auto;
+    height: 625px;
+    max-height: 625px;
   }
 }
 .hero__content {
-  position: relative;
-  padding: 1rem 0.75rem;
+  position: absolute;
   display: flex;
   flex-direction: column;
-  background: rgba(0, 0, 0, 0.3);
+  align-items: left;
+  background: rgba(0, 0, 0, 0.4);
   width: 100%;
-  min-height: 280px;
-  max-height: 280px;
+  height: auto;
+  height: 265px;
+  padding: 1rem;
 }
 @media screen and (min-width: 767px) {
   .hero__content {
-    width: 100%;
-    min-height: 485px;
-    max-height: 485px;
-    margin-top: -30.3rem;
-    padding: 3.25rem 2.5rem;
+    height: 510px;
+    max-height: 518px;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__content {
     width: 100%;
-    min-height: 625px;
+    height: 625px;
     max-height: 625px;
-    margin-top: -39rem;
+    padding-left: 6rem;
     display: flex;
     flex-direction: row;
     padding: 8rem 7rem;
@@ -191,12 +170,17 @@ p {
 .hero__headings {
   height: 50%;
 }
+@media screen and (min-width: 767px) {
+  .hero__headings {
+    padding-top: 2rem;
+  }
+}
 @media screen and (min-width: 1280px) {
   .hero__headings {
     margin: 0 auto;
     padding-top: 4rem;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
   }
 }
 .hero__subtitle {
@@ -205,36 +189,44 @@ p {
   position: relative;
   color: #FAFAFA;
   padding-left: 0.25rem;
+  font-size: 0.765rem;
 }
 @media screen and (min-width: 767px) {
   .hero__subtitle {
-    padding-left: 0;
+    padding-left: 1rem;
+    font-size: 1.72rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__subtitle {
-    width: 100%;
+    width: 80%;
+    padding-left: 0;
     padding-bottom: 0.5rem;
+    font-size: 1.6rem;
   }
 }
 .hero__title {
   font-family: "AvenirNext LT Pro";
   font-weight: 600;
-  width: 70%;
+  width: 85%;
   position: relative;
   color: #FFFFFF;
   padding: 0.75rem 0rem;
+  font-size: 1.45rem;
 }
 @media screen and (min-width: 767px) {
   .hero__title {
-    padding-left: 0;
+    padding-left: 1rem;
     margin-top: 0;
-    width: 75%;
+    font-size: 3.75rem;
+    width: 85%;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__title {
-    width: 90%;
+    width: 100%;
+    padding-left: 0;
+    font-size: 3.95rem;
   }
 }
 .hero__music {
@@ -245,6 +237,7 @@ p {
 }
 @media screen and (min-width: 767px) {
   .hero__music {
+    margin-left: 1rem;
     width: 60%;
     max-height: 37%;
     margin-top: 2rem;
@@ -252,6 +245,7 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .hero__music {
+    margin-top: 3rem;
     max-width: 40%;
     margin-left: 6rem;
     margin-top: 6rem;
