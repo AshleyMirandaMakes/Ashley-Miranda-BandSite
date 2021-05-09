@@ -39,10 +39,21 @@ formEl.addEventListener('submit', (event) => {
    // grab the data fom the form
    let formName = event.target.fullName.value;
    let formComment = event.target.fullComment.value;
-   if (formName === "" && formComment === "") {
+   if (formName === "" || formComment === "") {
        alert("Please enter your name and comment");
        return;
    };
+  //  if (formName === "") {
+  //   alert("Please enter your name");
+  //   return; 
+  //   } else if ( formComment === "") {
+  //   alert("Please enter your comment");
+  //   return;
+  //   } else (formName === "" && formComment === "" ) {
+  //   alert("Please enter your name and comment");
+  //   return;
+  //  };
+
 
    axios
    .post(API_URL + COMMENTS + API_KEY, {
@@ -128,12 +139,12 @@ function createCommentCards(comment) {
    .then(response => {
      if (ID === response.data.id) {
       deletedComment = response.data.id;
-      commentsArray.pop(deletedComment);
+      commentsArray.splice(deletedComment, 1);
+      //this removes first comment 
      };
 
     function displayComment() { 
       commentListEl.innerHTML = "";
-
       commentsArray.forEach(comment => {
       createCommentCards(comment);
         })
@@ -149,6 +160,7 @@ function createCommentCards(comment) {
 
   const cardTimestamp = createElementWithClass("h4", "comment__timestamp");
   let timeStamp = new Date(comment.timestamp).toLocaleDateString("en-US");
+  console.log(comment.timestamp)
   //that kinda works
   cardTimestamp.innerText = timeStamp;
   cardContentTop.appendChild(cardTimestamp);

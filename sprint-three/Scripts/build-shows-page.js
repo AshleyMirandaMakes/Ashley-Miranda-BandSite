@@ -80,18 +80,11 @@ function createShowCards(show) {
   cardEl.appendChild(cardTitleOne);
   
   const cardDate = createElementWithClass("h3", "showCard__date");
-  //TODO --- FIGURE OUT TIME STAMP STUFF
-  let timeStamp = Date(show.date);
-  // function getDate(timeStamp) {
-  //    let month = timeStamp.getMonth();
-  //    let year = timeStamp.getFullYear(); //doesn't work, how to turn into current year?
-  //    let day = timeStamp.getDate();
-  // const humanDateFormat = `${month.toLocaleString()}` + "/" + `${day.toLocaleString()}` + "/" + `${year.toLocaleString()}`;
-  //   return humanDateFormat;
-  // }
-  // timestamp = getDate();
+  let timeStamp = parseInt(show.date);
+  timeStamp = new Date(timeStamp).toLocaleDateString("en-US", { weekday: 'short', month: 'short', day: '2-digit', year: 'numeric'}).replaceAll(","," ");
+  console.log(new Date(timeStamp));
   cardDate.innerText = timeStamp;
-  cardEl.appendChild(cardDate);
+  cardEl.appendChild(cardDate)
 
   const cardTitleTwo = createElementWithClass("h3", "showCard__title");
   cardTitleTwo.innerText = "VENUE";

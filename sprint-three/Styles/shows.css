@@ -118,9 +118,11 @@ p {
   }
 }
 .hero__container {
+  background-image: url("../Assets/Images/shows-bio.jpg");
   width: 100%;
   min-height: 280px;
   max-height: 280px;
+  background: rgba(0, 0, 0, 0.3);
 }
 @media screen and (min-width: 767px) {
   .hero__container {
@@ -161,7 +163,6 @@ p {
   padding: 1rem 0.75rem;
   display: flex;
   flex-direction: column;
-  margin-top: -17.53rem;
   background: rgba(0, 0, 0, 0.3);
   width: 100%;
   min-height: 280px;
@@ -441,15 +442,16 @@ p {
   }
 }
 .showCard__button {
+  margin: 0 auto;
   text-decoration: none;
   color: #FFFFFF;
   font-family: "AvenirNext LT Pro";
   font-weight: 600;
-  min-width: 100%;
+  width: 100%;
   background-color: #323232;
   border-color: #323232;
   color: #FFFFFF;
-  padding: 0.75rem 5.87rem;
+  padding: 0.75rem 5.75rem;
   border-radius: 4px;
   margin-bottom: 1.5rem;
   height: 40px;

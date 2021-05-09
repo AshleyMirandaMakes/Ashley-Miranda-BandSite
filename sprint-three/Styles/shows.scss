@@ -19,9 +19,11 @@
     max-height: 625px;
   }
   &__container{
+    background-image: url( '../Assets/Images/shows-bio.jpg');
     width: 100%;
     min-height: 280px;
     max-height: 280px;
+    background: rgba(0, 0, 0, 0.3); 
     @include tablet {
       width: 100%;
       min-height: 300px;
@@ -55,7 +57,7 @@
     padding: 1rem .75rem;
     display: flex;
     flex-direction: column;
-    margin-top: -17.53rem;
+    //margin-top: -17.53rem;
     background: rgba(0, 0, 0, 0.3); 
     width: 100%;
     min-height: 280px;
@@ -286,13 +288,16 @@
      }
   }
    &__button{
+      @include margin-auto; 
       @include link-reset;
       @include font-demi;
-      min-width: 100%;
+      //min-width: 100%;
+      // max-width: 95%;
+      width: 100%;
       background-color: $color-primary-black;
       border-color: $color-primary-black;
       color: $color-primary-white;
-      padding: .75rem 5.87rem;
+      padding: .75rem 5.75rem;
       border-radius: 4px;
       margin-bottom: 1.5rem;
       height: 40px;
@@ -303,6 +308,7 @@
       }
       @include tablet {
         @include flex-center;
+        // margin: 3rem 0rem;
         min-width: 150px;
         max-width: 190px;
         align-self: flex-end;
